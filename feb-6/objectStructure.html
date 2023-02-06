@@ -1,0 +1,87 @@
+<script>
+
+	var personAllTypes={
+
+		"fullName":"suresh",
+
+		"amount":45,
+
+		"flag":true,
+
+		"address":undefined
+
+	};
+
+//for key in double quotes it is valid object. But
+
+//please dont use it. Double quotes is used for only json.
+
+	console.log(typeof personAllTypes);
+
+</script>
+
+JSON:
+
+//It is one type of data format to transfer
+
+data from frontend to backend.
+
+<script>
+
+var personAllTypes={
+
+fullName:"suresh",
+
+amount:45,
+
+flag:true,
+
+address:undefined,
+
+amount:100
+
+};
+
+console.log(personAllTypes);
+
+</script>
+
+var list=["samsung",64,true,undefined,34];
+
+//create operation
+
+//read operation
+
+console.log(list);
+
+console.log(list[0]);
+
+console.log(list[2]);
+
+console.log(list[10]);
+
+//update operation
+
+list[3] = "akash";
+
+console.log(list);
+
+//delete operation:
+
+list.pop();
+
+//it will remove the element from last position.
+
+console.log(list);
+
+list.pop();
+
+console.log(list);
+
+//add operation:
+
+list.push(555);
+
+//it will add the element at the end position.
+
+console.log(list);
