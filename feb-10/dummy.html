@@ -1,0 +1,38 @@
+<!-- false condition
+0
+""
+''
+false
+undefind
+null
+NaN -->
+<script>
+	var netflixSubscription = false;
+	var result = netflixSubscription === true ?
+	"yes we have subscription":"please reacharge now";
+	alert(result);
+</script>
+<script>
+	var result = 0 ? true : false;
+	console.log(result);
+	result = "" ? true : false;
+	console.log(result);
+	result = false ? true : false;
+	console.log(result);
+	result = NaN ? true : false;
+	console.log(result);
+	result = null ? true : false;
+	console.log(result);
+	result = undefined ? true : false;
+	console.log(result);
+</script>
+<script>
+function positive(){
+console.log("The amount is paid successfully");
+}
+function negative(){
+console.log("The amount is not paid");
+}
+var amount = 34;
+amount>0?positive():negative();
+</script>
