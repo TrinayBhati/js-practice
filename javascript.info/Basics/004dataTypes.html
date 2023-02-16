@@ -66,13 +66,28 @@
 		alert(typeof alert); // this is function
 		alert(typeof Math); // and null as well shows object tho it's an error in null's case
 
+		alert("Hello");
+	//The mini-window with the message is called a modal window
 
-
-
-
-
-
-
+	result = prompt(title, [default]); // title text to show, default second parameter, the user enters here
+	// shows modal window but with text and an input field for the visitor, and ok ancel button
+	// whatever the ser enters we can store it as well
+	let name = prompt("What is your name?", [name here]);
+	alert(`Hello ${name}`);
 
 
 		</script>
+//number for numbers of any kind: integer or floating-point, integers are limited by ±(253-1).
+//bigint for integer numbers of arbitrary length.
+//string for strings. A string may have zero or more characters, there’s no separate single-character type.
+//boolean for true/false.
+//null for unknown values – a standalone type that has a single value null.
+//undefined for unassigned values – a standalone type that has a single value undefined.
+//symbol for unique identifiers.
+//And one non-primitive data type:
+//object for more complex data structures.
+//The typeof operator allows us to see which type is stored in a variable.
+
+//Usually used as typeof x, but typeof(x) is also possible.
+//Returns a string with the name of the type, like "string".
+//For null returns "object" – this is an error in the language, it’s not actually an object.		
