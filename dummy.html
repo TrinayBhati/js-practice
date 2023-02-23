@@ -1,5 +1,5 @@
-<html>
-	<head>
+<!-- <html>
+		<head>
 		<style>
 		.boxRed{
 		color:red;
@@ -33,4 +33,38 @@
 		}
 		</script>
 	</body>
+</html>
+<html>
+<head></head>
+<body>
+	<p id="demo">Hello World </p>
+	<script type="text/javascript">
+		var input =document.getElementById("demo");
+		console.log(input);
+		console.log(input.innerHTML);
+		document.getElementById("demo").innerHTML ="Hello Buddy"
+		;
+	</script>
+</body>
+</html> -->
+
+
+
+<html>
+<head>
+</head>
+<body>
+	FullName:<input type="text" name="fullName" onChange="onSubmitHandler(event)"/>
+	<div id="box"></div>
+	<script>
+	function onSubmitHandler(event){
+	console.log(event);
+	console.log(event.target.value);
+	console.log(event.target.name);
+	var input = document.getElementById('box');
+	input.innerHTML = event.target.value;
+	input.style.color = event.target.value;
+	}
+	</script>
+</body>
 </html>
