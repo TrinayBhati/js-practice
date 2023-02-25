@@ -239,15 +239,15 @@
 		</script>
 	</body>
 </html> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-</head>
-<body>
-<ul>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<ul>
 			<li class="game">name</li>
 			<li class="game">place</li>
 			<li class="game">animal</li>
@@ -257,8 +257,132 @@
 		<p id="yo">eat nothing</p>
 		<div id="yank"> welcome to middle of nowhere</div>
 		<script type="text/javascript">
-			var inut = document.querySelectorAll(".game");
+			var input = document.querySelectorAll(".game");
 			console.log(input.length);
+			var input2 = document.querySelectorAll("li");
+			console.log(input2.length);
+			var input3 = document.querySelectorAll("#yank");
+			console.log(input3.length);
+			var input4 = document.querySelectorAll("li.game");
+			for(var obj of input4){
+				console.log(obj);
+			}
+			var input5 = document.querySelectorAll("p#yo");
+			for(var obj of input5){
+				console.log(obj.innerHTML);
+			}
 		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>set Attribute</title>
+</head>
+<body>
+<a id="link"> Click here mfers</a>	
+	<script type="text/javascript">
+		var input = document.getElementById("link");
+		input.href = "http://www.google.com";
+		input.setAttribute("class", "box");
+	</script>
 </body>
-</html>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>dynamic</title>
+	</head>
+	<body>
+		Enter website name <input type="text" name="website" id="link">
+		<button id="button" onclick="onSubmit()"> Click Here</button>
+		<script type="text/javascript">
+			var input = document.getElementById("link").value;
+			function onSubmit(){
+				alert(input);
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>dynamic element</title>
+	</head>
+	<body>
+		<div id="demo"></div>
+		<script type="text/javascript">
+			var element = document.createElement('p');
+			var textElement = document.createTextNode("Hello World");
+			element.appendChild(textElement);
+			var input = document.getElementById("demo");
+			input.appendChild(element);
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>boxes</title>
+		<style type="text/css">
+			.container{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			.even-box{
+				height: 100px;
+				width: 200px;
+				background-color: blue;
+				color: yellow;
+				font-size: 40px;
+				margin: 8px;
+			}
+			.odd-box{
+				height: 100px;
+				width: 200px;
+				background-color: yellow;
+				color: blue;
+				font-size: 40px;
+				margin: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		enter a number bitch<input type="text" name="number" id="number"/>
+		<button onClick="onSubmit()">Click Me Daddy</button>
+		<div class="container" id="container-box">
+			
+		</div>
+		<script type="text/javascript">
+			function onSubmit(){
+				var input = Number(document.getElementById("number").value);
+			var main = document.getElementById("container-box");
+			for(var i = 1; i<input; i++){
+				var element = document.createElement('div');
+				var textElement = document.createTextNode(i);
+				element.appendChild(textElement);
+				if(i%2 == 0){
+					element.classList.add("even-box");
+				}
+				else{
+					element.classList.add("odd-box");
+				}
+				main.appendChild(element);
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html> -->
