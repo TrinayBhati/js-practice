@@ -1,70 +1,264 @@
+<!-- <!DOCTYPE html>
+<html>
+				<head>
+								<meta charset="utf-8">
+								<meta name="viewport" content="width=device-width, initial-scale=1">
+								<title>list</title>
+				</head>
+				<body>
+								<ul>
+												<li class="heading"> Pen</li>
+												<li class="heading"> Pencil</li>
+												<li class="heading" id="bitch"> Paper</li>
+												<li class="heading"> Eraser </li>
+								</ul>
+		<script type="text/javascript">
+			var input = document.getElementsByClassName("heading");
+			for( var obj of input){
+				obj.innerHTML = "bitch"+obj.innerHTML
+				;
+			}
+		</script>
+	</body>
+</html> -->
 <!-- <html>
-		<head>
+				<head>
+				</head>
+				<body>
+								<form onReset="onResetHandler()">
+												FullName:<input type="text" name="fullName"/>
+												<br/> <br/>
+												Age:<input type="number" name="age"/>
+												<div id="errorAge"></div>
+												<br/> <br/>
+												<button type="submit" value="submit">Submit</button>
+												<button type="reset" value="reset">Reset</button>
+								</form>
+		<script>
+		function onResetHandler(){
+		alert("before clearing");
+		//it will stop further event of form tag.going to action attribute and finding the next page
+		}
+		</script>
+	</body>
+</html> -->
+<!-- <html>
+				<head>
+				</head>
+				<body>
+								fullName:<input type="text" name="fullName" onkeyup="onkeyupHandler(event)"/>
+								<div id="demo"></div>
+		<script>
+		var list=['car','pencil','person'];
+		function onkeyupHandler(event){
+		console.log(event.target.value);
+		if(list.includes(event.target.value)){
+		document.getElementById('demo').innerHTML = "please dont use common name";
+		}
+		//it will stop further event of form tag.going to action attribute and finding the next page
+		}
+		</script>
+	</body>
+</html> -->
+<!-- <html>
+				<head>
 		<style>
-		.boxRed{
-		color:red;
-		}
-		.boxGreen{
-		color:green;
-		}
-		.boxYellow{
-		color:yellow;
+		#demo {
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
 		}
 		</style>
 	</head>
 	<body>
-		<ul>
-			<li class="heading">Pen</li>
-			<li class="heading">Pencil</li>
-			<li class="heading" id="list">Eraser</li>
-		</ul>
+		<div id="demo"></div>
 		<script>
-		var input = document.getElementsByClassName("heading");
-		for(var obj of input){
-		if(obj.innerHTML == "Pen"){
-		obj.classList.add("boxGreen");
+		const onMouseHandler = (event) => {
+		event.target.style.backgroundColor = "green";
+		event.target.style.width = "500px";
+		event.target.style.height = "500px";
 		}
-		else if(obj.innerHTML == "Pencil"){
-		obj.classList.add("boxYellow");
+		const onMouseOutHandler = (event) => {
+		event.target.style.backgroundColor = "red";
+		event.target.style.width = "300px";
+		event.target.style.height = "300px";
 		}
-		else{
-		obj.classList.add('boxRed');
+		const onClickHandler = (event) => {
+		event.target.style.backgroundColor = "yellow";
+		event.target.style.width = "100px";
+		event.target.style.height = "100px";
 		}
-		}
+		document.getElementById("demo").addEventListener('mouseover', onMouseHandler)
+		document.getElementById("demo").addEventListener('mouseout', onMouseOutHandler)
+		document.getElementById("demo").addEventListener('click', onClickHandler)
 		</script>
 	</body>
-</html>
-<html>
-<head></head>
-<body>
-	<p id="demo">Hello World </p>
-	<script type="text/javascript">
-		var input =document.getElementById("demo");
-		console.log(input);
-		console.log(input.innerHTML);
-		document.getElementById("demo").innerHTML ="Hello Buddy"
-		;
-	</script>
-</body>
 </html> -->
-
-
-
+<!-- <!DOCTYPE html>
+<html>
+				<head>
+								<meta charset="utf-8">
+								<meta name="viewport" content="width=device-width, initial-scale=1">
+								<title>list</title>
+		<style type="text/css">
+			.red{
+				color: red;
+			}
+			.blue{
+				color: blue;
+			}
+			.green{
+				color: green;
+			}
+			.yellow{
+				color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="language">java</li>
+			<li class="language">javascript</li>
+			<li class="language">css</li>
+			<li class="language">html</li>
+		</ul>
+		<script type="text/javascript">
+			var input = document.getElementsByClassName("language");
+			console.log(input);
+			for(var obj of input){
+				if(obj.innerHTML == "javascript"){
+					obj.classList.add("red");
+				}
+				else if(obj.innerHTML=="java"){
+					obj.classList.add("blue");
+				}
+				else if(obj.innerHTML=="css"){
+					obj.classList.add("yellow");
+				}
+				else{
+					obj.classList.add('green');
+				}
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+				<head>
+								<meta charset="utf-8">
+								<meta name="viewport" content="width=device-width, initial-scale=1">
+								<title>clicks</title>
+		<style type="text/css">
+			.text{
+				
+				color: violet;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<input type="text" name="Name"  id="dum" />
+		<button onclick="onSubmit()">Click here</button>
+		<div id="demo"></div>
+		<script type="text/javascript">
+			function onSubmit(){
+				var userInput =  document.getElementById("dum").value;
+				var demo =  document.getElementById("demo");
+				demo.innerHTML = userInput;
+				demo.classList.add("text");
+				demo.style.fontSize = ("90px");
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+			<head>
+						<meta charset="utf-8">
+						<meta name="viewport" content="width=device-width, initial-scale=1">
+						<title>events</title>
+			</head>
+			<body>
+						<ul>
+									<li class="language">java</li>
+									<li class="language">javascript</li>
+									<li class="language">css</li>
+									<li class="language">html</li>
+						</ul>
+		<script type="text/javascript">
+			var input = document.getElementsByClassName("languages");
+			console.log(input);
+			console.log(typeof input);
+			console.log(Array.isArray(input));
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+		<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>to upper case</title>
+		</head>
+		<body>
+				<ul>
+						<li class="game">name</li>
+						<li class="game">place</li>
+						<li class="game">animal</li>
+						<li class="game">thing</li>
+				</ul>
+		<script type="text/javascript">
+			var input = document.getElementsByClassName("game");
+			for(var obj of input){
+				obj.innerHTML = obj.innerHTML.toUpperCase();
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>events</title>
+	</head>
+	<body>
+		<ul>
+			<li class="game">name</li>
+			<li class="game">place</li>
+			<li class="game">animal</li>
+			<li class="game">thing</li>
+		</ul>
+		<script type="text/javascript">
+			// selectors - getElementsByClassname getElementById getElementsByTagName
+			var absurd = document.getElementsByTagName("li");
+			for(var obj of absurd){
+				obj.innerHTML = obj.innerHTML.toUpperCase();
+			}
+		</script>
+	</body>
+</html> -->
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
 </head>
 <body>
-	FullName:<input type="text" name="fullName" onChange="onSubmitHandler(event)"/>
-	<div id="box"></div>
-	<script>
-	function onSubmitHandler(event){
-	console.log(event);
-	console.log(event.target.value);
-	console.log(event.target.name);
-	var input = document.getElementById('box');
-	input.innerHTML = event.target.value;
-	input.style.color = event.target.value;
-	}
-	</script>
+<ul>
+			<li class="game">name</li>
+			<li class="game">place</li>
+			<li class="game">animal</li>
+			<li class="game">thing</li>
+		</ul>
+		<p id="ye">eat shit</p>
+		<p id="yo">eat nothing</p>
+		<div id="yank"> welcome to middle of nowhere</div>
+		<script type="text/javascript">
+			var inut = document.querySelectorAll(".game");
+			console.log(input.length);
+		</script>
 </body>
 </html>
