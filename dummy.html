@@ -447,7 +447,7 @@
 		</script>
 	</body>
 </html> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -465,4 +465,231 @@
 			}
 		</script>
 	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>onSubmit</title>
+	</head>
+	<body>
+		<form onsubmit="onSubmitHandler(event)">
+			Enter Full Name<input type="text" name="name"/>
+			</br>
+			</br>
+			Enter Age<input type="number" name="age">
+			</br>
+			</br>
+			<button id="click">Submit</button>
+			<script type="text/javascript">
+				function onSubmitHandler(event){
+					event.preventDefault();
+					var list = document.forms[0];
+					for(var i = 0; i<list.length ; i++){
+							console.log(list.elements[i].value);
+						}
+					}
+				</script>
+			</form>
+		</body>
+	</html> -->
+<!-- 	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>onSubmit</title>
+	</head>
+	<body>
+		<form onsubmit="onSubmitHandler(event)">
+			Enter Full Name<input type="text" name="name"/>
+		</br>
+	</br>
+	Enter Age<input type="number" name="age">
+	<div id="errorAge"></div>
+</br>
+</br>
+<button type="submit" value="submit" id="click">Submit</button>
+<script type="text/javascript">
+	function onSubmitHandler(event){
+		event.preventDefault();
+		var list = document.forms[0];
+		for(var i = 0; i<list.length ; i++){
+			console.log(list.elements[i].value);
+			if(list.elements[i].value === "" || list.elements[i].value === null || list.elements[i].value === undefined ){
+				list.elements[i].style.border = "3px solid red";
+			}
+			else{
+
+				list.elements[i].style.border = "1px solid black";
+			}
+			if(list.elements[i].name === "age"){
+				var input = Number(list.elements[i].value);
+				if(input < 18 || input >70){
+					var error = document.getElementById("errorAge");
+					error.innerHTML = "age should be between 18 to 70";
+					error.style.color = "red";
+				}
+				else{
+					 var error = document.getElementById('errorAge');
+					error.innerHTML="";
+				}
+			}
+		}
+	}
+</script>
+</form>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>onreset</title>
+	</head>
+	<body>
+		<form onReset="onResetHandler()">
+			Enter Full Name<input type="text" name="name"/>
+			</br>
+			</br>
+			Enter Age<input type="number" name="age">
+			<div id="errorAge"></div>
+			</br>
+			</br>
+			<button type="submit" value="submit" id="click">Submit</button>
+			<button type="reset" value="reset" id="click">Reset</button>
+			<script type="text/javascript">
+				function onResetHandler(){
+					alert("u sure");
+				}
+			</script>
+		</body>
+	</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>onkeyup</title>
+	</head>
+	<body>
+		enter password
+		<input type="text" name="password" onkeyup="onKeyUpHandler(event)">
+		<script type="text/javascript">
+			function onKeyUpHandler(event){
+				console.log(event.target.value);
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>onkeyup</title>
+	</head>
+	<body>
+		enter password
+		<input type="text" name="password" onkeyup="onKeyUpHandler(event)">
+		<div id="dumb"></div>
+		<script type="text/javascript">
+			var list = ["trinay", "shourya" , "ajay" , "aruna"];
+			function onKeyUpHandler(event){
+				console.log(event.target.value);
+				if(list.includes(event.target.value)){
+					document.getElementById("dumb").innerHTML="don't use these names bitch";
+				}
+				else{
+					document.getElementById("dumb").innerHTML="";
+				}
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>onkeyup</title>
+	</head>
+	<body>
+		enter password
+		<input type="text" name="password" onkeydown="onKeyDownHandler(event)">
+		<div id="dumb"></div>
+		<script type="text/javascript">
+			var list = ["trinay", "shourya" , "ajay" , "aruna"];
+			function onKeyDownHandler(event){
+				console.log(event.target.value);
+				if(list.includes(event.target.value)){
+					document.getElementById("dumb").innerHTML="don't use these names bitch";
+				}
+				else{
+					document.getElementById("dumb").innerHTML="";
+				}
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>onkeyup</title>
+	</head>
+	<body>
+		enter password
+		<input type="text" name="password" onkeydown="onKeyDownHandler(event)">
+		<div id="dumb"></div>
+		<script type="text/javascript">
+			var list = ["trinay", "shourya" , "ajay" , "aruna"];
+			function onKeyDownHandler(event){
+				console.log(event.target.value);
+				event.target.value = event.target.value.toUpperCase();
+				if(list.includes(event.target.value)){
+					document.getElementById("dumb").innerHTML="don't use these names bitch";
+				}
+				else{
+					document.getElementById("dumb").innerHTML="";
+				}
+				if(event.target.value.length >8){
+					event.target.disabled = true;
+				}
+			}
+		</script>
+	</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>on mouse in and out</title>
+	<style type="text/css">
+		#dumb{
+			height: 200px;
+			width: 300px;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="dumb" onmouseover="onMouseInHandler()" onmouseout="onMouseOutHandler()"></div>
+	<script type="text/javascript">
+
+		function onMouseInHandler(){
+			document.getElementById("dumb").style.backgroundColor = "red";
+			document.getElementById("dumb").style.height = "500px";
+		}
+		function onMouseOutHandler(){
+			document.getElementById("dumb").style.backgroundColor = "white";
+			document.getElementById("dumb").style.height = "200px";
+		}
+	</script>
+
+</body>
 </html>
