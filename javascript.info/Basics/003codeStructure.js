@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 	"use strict";
 	alert("Hello");
 	alert("World");
@@ -23,4 +23,3 @@
 	const birthdate = '07.08.200';
 	alert(birthdate);
 
-</script>

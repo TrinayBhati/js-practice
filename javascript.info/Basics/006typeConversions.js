@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 	
 	//string conversion
 	let value = true; // this is boolean now
@@ -32,4 +32,3 @@
 	alert(Boolean(0));
 	alert(Boolean(1));
 
-</script>

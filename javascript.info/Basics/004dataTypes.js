@@ -1,5 +1,4 @@
 
-		<script type="text/javascript">
 
 		//8 basic types of data types
 		var message = "hello";
@@ -76,7 +75,7 @@
 	alert(`Hello ${name}`);
 
 
-		</script>
+		
 //number for numbers of any kind: integer or floating-point, integers are limited by ±(253-1).
 //bigint for integer numbers of arbitrary length.
 //string for strings. A string may have zero or more characters, there’s no separate single-character type.

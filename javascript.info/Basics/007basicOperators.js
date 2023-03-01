@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 	
 	// unary operators- that only have single operand
 	let x = 1; 
@@ -90,4 +90,3 @@
 		let bn = prompt("Second number?", 2);
 		alert(an + bn); // 12
 
-</script>
