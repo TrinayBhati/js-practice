@@ -25,6 +25,32 @@
 		else{
 			alert("Hold up");
 		}
+	//naming a function
+	//"get---" to return a value
+	//"calc---" calculate something
+	//"create---" create something
+	//"check---" check something
+	let sayHi = function(){
+		alert("hello");
+	};
+
+	//callback function
+	function ask(question, yes, no){
+		if(confirm(question) ){
+			yes();
+		}
+		else{
+			no();
+		}
+	}
+	function showOk(){
+		alert("agreed");
+	}
+	function showCancel(){
+		alert("canceled");
+	}
+	ask("Do you agree", showOk, showCancel);
+
 
 
 
