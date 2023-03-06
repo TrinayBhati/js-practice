@@ -15,15 +15,20 @@
  	// groceries.slice(2,4);
  	// groceries.length;
 
- 	let person = (name, age)=>{
- 		let props={
- 			name: name,
- 			age :age
+ 	let person = (name, age, pay, expenses)=>{
+ 	let pop = {
+ 		pay: pay,
+ 		expenses : expenses,
+ 		 savings: function () {
+ 			return this.pay - this.expenses;
  		}
- 		let intro = `my name is ${props.name} i am ${props.age} years old`;
- 		return intro;
- 	}
- 	console.log(person("Trinay", "22"));
+ 		
+ 	};
+ 	let intro = `My name is ${name} and I'm ${age} years old. my savings are ${pop.savings()}`
+ 	return intro;
+ }
+
+ 	console.log(person("Trinay", 22, 2000, 500));
  	
 
 
