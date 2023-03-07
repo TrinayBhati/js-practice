@@ -29,7 +29,11 @@
  }
 
  	console.log(person("Trinay", 22, 2000, 500));
- 	
+ 	const numbers= [2,3,4,5,2,6,2,7,9];
+ 	for(let number of numbers){
+ 		result.push(number*2)
+ 	}
+
 
 
 
