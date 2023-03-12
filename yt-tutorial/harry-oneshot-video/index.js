@@ -277,7 +277,7 @@ logKaro = ()=>{
     document.querySelectorAll('.container')[1].innerHTML = "<b> Set interval fired</b>"
     console.log("I am your log")
 }
-// SetTimeout and setinterval
+// SetTimeout and setinterval 
 // clr = setTimeout(logKaro, 5000);
 // clr = setInterval(logKaro, 2000);
 // use clearInterval(clr)/clearTimeout(clr) to cancel setInterval/setTimeout
