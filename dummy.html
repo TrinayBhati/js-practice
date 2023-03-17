@@ -1013,3 +1013,249 @@
 		</script>
 	</body>
 </html> -->
+<!-- <script>
+	let Person={
+		fullName : "suresh";
+		age : 45;
+		age : 30;
+	}
+	console.log(person);
+	console.log(person.age);
+	person.age = 22;
+	person.fullName = "Jayesh";
+	console.log(person);
+	delete person.age;
+	//deletes person age
+</script> -->
+<!-- <script>
+	let list = ["samsung", 44, "toyota", true];
+	console.log(list);
+	console.log(typeof list); // object
+	console.log(list[0]);
+	console.log(list[2]);
+	list[2] = "maruti";
+	list.pop(); // last element gone 
+	list.push(55);
+	list.push("honda");// add element at last
+
+</script> -->
+<!-- <script>
+	let list = [
+	{
+		name : "Trinay",
+		age : 20,
+		school: "kv"
+	},
+	{
+		name : "Shourya",
+		age : 8,
+		school : "lfps" 
+	},
+	{
+		name : "papu",
+		age :40,
+		school : "dav"
+	},
+	]
+	console.log(list[0]); // complete object 
+	console.log(list[2].name[1]); // the second index item of th name element
+	console.log(list.length); // 3 as only 3 objects
+</script> -->
+<!-- <script type="text/javascript">
+	function dope(jeez){
+		console.log( "nice one ", jeez )
+	}
+	function double(a){
+		return a*2;
+	}
+	function(a,b){
+		console.log("sum is", a+b);
+	}
+	let doubleAns = double(8);
+	const pi = 3.14;
+	console.log(pi);
+	let num = "44.55"; // this is type string now
+	console.log(parseInt(num));// now it is number only 44 tho not the decimal part
+	let number = "44.33";
+	console.log(parseFloat(number));// gives number 44.33
+	// a = a+1; === a++
+	// a = a-1; === a--
+</script> -->
+<!-- <script type="text/javascript">
+	function yes(){
+		console.log("yes");
+	}
+	function no(){
+		console.log("no");
+	}
+	let am = 40;
+	let result = am <= 0 ? no() : yes();
+</script> -->
+<!-- <script type="text/javascript">
+	let list = [{
+		name : "Trinay",
+		age : 22,
+	},
+	{
+		name : "Shourya",
+		age : 8,
+	},
+	];
+	// for(int i = 0; i< list.length; i++){
+	// 	console.log(list.name[i], list.age[i]);
+	// }
+	for(let obj of list){
+		console.log(obj.name, obj.age);
+	}
+	for(let obj in list){
+		console.log(list[obj].name , list[obj].age);
+	}
+</script> -->
+<!-- <script>
+	let list =[22, 33, 44, 55];
+	let list1 =[7,88,99];
+	list.push(66); //add at last
+	list.unshift(11); //add at front
+	list.pop(); // remove from last
+	list.shift(); // remove from front
+	list.length; //length of array
+	list.splice(2,2); // first is index of element and second one is the number of elements
+	list.slice(2,3);
+	list.concat(list1); // adds both arrays
+	list.reverse();
+	list.includes(55); // boolean value if the element is present or not
+	list.indexOf(44); //  index of the element
+	list.toString(); // coma seperated stirng conversion
+	list.join(" yo ")// string conversion with ""
+	list.forEach((num) =>{
+		console.log(num);
+	})
+	list.forEach(function(number,index){
+	  console.log(number,index);
+	})
+	list.some(function(input){
+		return input > 40;
+	});//output true
+	list.every(function(input){
+		return input > 40;
+	});// output false
+</script> -->
+<!-- <script type="text/javascript">
+	var list = [{
+		name : "Trinay",
+		age : 22,
+	},
+	{
+		name : "Shourya",
+		age : 8,
+	},{
+		name: "ganesh",
+        age: 12,
+	}
+	];
+	let result = list.map(function(input){
+		return input;
+		return input.name;
+	});
+	let answer = list.filter(function(input){
+		return input.age>18;
+	});
+	let array = [2,3,4,5,6];
+	let sum = array.reduce(function(a,b){
+		return a+b;
+	});
+	let joined = [...list,...array];
+</script> -->
+<!-- <script type="text/javascript">
+	list.filter((input)=>{
+		return list.age <18;
+	}).map((input)=>{
+		return list.age;
+	}).reduce((a,b)=>{
+		return a+b;
+	});
+		//spread operator used in arrays
+
+</script> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>dom</title>
+	</head>
+	<body>
+		<p id="para">WADDUP</p>
+		<script type="text/javascript">
+			let ind = document.getElementById("para");
+			ind.style.color = "blue";
+			ind.style.border = "4px";
+			let list = {
+				name :"Trinay",
+				age : 22,
+				qualification : "BCA",
+			}
+			let listTwo = JSON.stringify(list);
+			console.log(typeof listTwo);
+			listTwo = JSON.parse(listTwo);
+			console.log(typeof listTwo);
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>click event</title>
+	</head>
+	<body>
+		<div id="main">
+			<button onClick="tic()">click me</button>
+		</div>
+		<script type="text/javascript">
+			function tic(){
+				document.body.style.backgroundColor = "black";
+				
+				console.log("clicked")
+			}
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>event listener</title>
+	</head>
+	<body>
+		write here
+		<br>
+		<input type="text" id="colorInput">
+		<button id="input">click</button>
+		<script type="text/javascript">
+			let button = document.getElementById("input");
+			button.addEventListener("click", () => {
+				let color = document.getElementById("colorInput").value;
+				document.body.style.color = color;
+			});
+		</script>
+	</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>class</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let input = document.getElementById("demo");
+		input.classList.add("box");
+		input.innerText .toUpperCase();
+	</script>
+
+</body>
+</html>
