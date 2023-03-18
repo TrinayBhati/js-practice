@@ -1243,19 +1243,188 @@
 		</script>
 	</body>
 </html> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>class</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let input = document.getElementById("demo");
+			input.classList.add("box");
+			for(let obj of list){
+					onj.innerText = obj.innerText .toUpperCase();	//tag + class = li.classname
+			}
+			
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>class</title>
+	<title>append</title>
 </head>
 <body>
-	<script type="text/javascript">
-		let input = document.getElementById("demo");
-		input.classList.add("box");
-		input.innerText .toUpperCase();
+	<div id="new"></div>
+	<script>
+		let element = document.createElement("p");
+		let textElement = document.createTextNode("YO YO");
+		element.appendChild(textElement);
+		let input = document.getElementById("new");
+		input.appendChild(element);
+
 	</script>
 
 </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>mini project</title>
+		<style type="text/css">
+			.main{
+				color: white;
+				font-size: 40px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+			}
+			body{
+				background-color: black;
+			}
+			.odd{
+				height: 200px;
+				width: 200px;
+				background-color: white;
+				margin: 5px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+			}
+			.even{
+				height: 200px;
+				width: 200px;
+				background-color: gray;
+				margin: 5px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+			}
+			#box{
+				padding: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+				justify-content: space-around;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			Enter number of boxes :
+			<input type="number" name="number" id="input">
+			<button id="btn"> SUBMIT</button>
+		</div>
+		<div id="box"></div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('btn').addEventListener("click",(e) => {
+		let input = Number(document.getElementById("input").value);
+		console.log(input);
+		for(let i = 1; i<input;i++){
+			let element = document.createElement("div");
+			let value = document.createTextNode(i);
+			element.appendChild(value);
+			if(i%2==0){
+				element.classList.add("even");
+			let box = document.getElementById("box");
+			box.appendChild(element);
+			}
+			else{
+				element.classList.add("odd");
+			let box = document.getElementById("box");
+			box.appendChild(element);
+			}
+		}
+		});
+				
+	</script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>mini project</title>
+		<style type="text/css">
+			.main{
+				color: white;
+				font-size: 40px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+			}
+			body{
+				background-color: black;
+			}
+			.odd,
+			.even{
+				height: 200px;
+				width: 200px;
+				margin: 5px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+			}
+			.odd{
+				background-color: white;
+			}
+			.even{
+				background-color: gray;
+			}
+			#box{
+				padding: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+				justify-content: space-around;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			Enter number of boxes :
+			<input type="number" name="number" id="input">
+			<button id="btn"> SUBMIT</button>
+		</div>
+		<div id="box"></div>
+		<script type="text/javascript">
+			document.getElementById('btn').addEventListener("click",(e) => {
+				let input = Number(document.getElementById("input").value);
+				let box = document.getElementById("box");
+				for(let i = 1; i<input;i++){
+					let element = document.createElement("div");
+					element.textContent = i;
+					element.classList.add(i%2==0 ? "even" : "odd");
+					box.appendChild(element);
+				}
+			});
+		</script>
+	</body>
 </html>
+
+ 
