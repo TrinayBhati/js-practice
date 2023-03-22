@@ -1520,12 +1520,11 @@
  <!DOCTYPE html>
  <html>
  <head>
- 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
  	<title>assignment 25</title>
  </head>
  <body>
- 	<input type="text" name="input">
+ 	<input type="text" name="input" id="input">
  	<button id="add" onclick="onAddHandler()">add</button>
  	<button id="even">even</button>
  	<button id="odd">odd</button>
@@ -1536,8 +1535,25 @@
  	<div id="display"></div>
  	<script type="text/javascript">
  		function onAddHandler(){
- 			let input = document.getElementById("input").value;
+ 			let input = document.getElementById('input').value;
+ 			let result = input.split(',');
+ 			if(checkingNumberType(result)){
+ 				document.getElementById("error").innerText = "Wrong Input";
+ 				console.log("right")
+ 			}
+ 			else{
+ 				document.getElementById("error").innerText = "";
+ 			}
  			
+ 		}
+ 		function checkingNumberType(result){
+ 			let numberType = [0,1,2,3,4,5,6,7,8,9];
+ 			for(let i = 0; i< result.length ; i++){
+ 				if(!numberType.includes(Number(result[i]))){
+ 					return true;
+ 				} 	
+ 			}
+ 			return false;
  		}
  	</script>
 
