@@ -1517,45 +1517,81 @@
 	console.log(child);
 </script>
  -->
- <!DOCTYPE html>
- <html>
- <head>
- 	
- 	<title>assignment 25</title>
- </head>
- <body>
- 	<input type="text" name="input" id="input">
- 	<button id="add" onclick="onAddHandler()">add</button>
- 	<button id="even">even</button>
- 	<button id="odd">odd</button>
- 	<button id="join">join</button>
- 	<div id="error"></div>
- 	<div id="display"></div>
- 	<div id="display"></div>
- 	<div id="display"></div>
- 	<script type="text/javascript">
- 		function onAddHandler(){
- 			let input = document.getElementById('input').value;
- 			let result = input.split(',');
- 			if(checkingNumberType(result)){
- 				document.getElementById("error").innerText = "Wrong Input";
- 				console.log("right")
- 			}
- 			else{
- 				document.getElementById("error").innerText = "";
- 			}
- 			
- 		}
- 		function checkingNumberType(result){
- 			let numberType = [0,1,2,3,4,5,6,7,8,9];
- 			for(let i = 0; i< result.length ; i++){
- 				if(!numberType.includes(Number(result[i]))){
- 					return true;
- 				} 	
- 			}
- 			return false;
- 		}
- 	</script>
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>assignment 25</title>
+	</head>
+	<body>
+		<input type="text" name="input" id="input">
+		<button id="add" onclick="onAddHandler()">add</button>
+		<button id="even">even</button>
+		<button id="odd">odd</button>
+		<button id="join">join</button>
+		<div id="error"></div>
+		<div id="display"></div>
+		<div id="display"></div>
+		<div id="display"></div>
+		<script type="text/javascript">
+			function onAddHandler(){
+				let input = document.getElementById('input').value;
+				let result = input.split(',');
+				if(checkingNumberType(result)){
+					document.getElementById("error").innerText = "Wrong Input";
+					console.log("right")
+				}
+				else{
+					document.getElementById("error").innerText = "";
+				}
+				
+			}
+			function checkingNumberType(result){
+				let numberType = [0,1,2,3,4,5,6,7,8,9];
+				for(let i = 0; i< result.length ; i++){
+					if(!numberType.includes(Number(result[i]))){
+						return true;
+						}
+				}
+				return false;
+			}
+		</script>
+	</body>
+</html> -->
 
- </body>
- </html>
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>calculator</title>
+	</head>
+	<body>
+		<div class="main">
+			<input type="text" name="text" id="input" />
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>4</button>
+			<button>5</button>
+			<button>6</button>
+			<button>7</button>
+			<button>8</button>
+			<button>9</button>
+			<button>0</button>
+			<button>*</button>
+			<button>/</button>
+			<button>+</button>
+			<button>-</button>
+			<button id="equals">=</button>
+		</div>
+		<script type="text/javascript">
+			let input = Number(document.getElementById("input").value);
+			document.getElementById("equals").addEventListener("click",(e)=>{
+				console.log(eval(input));
+			});
+			
+			
+		</script>
+	</body>
+</html> -->
