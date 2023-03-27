@@ -1558,50 +1558,182 @@
 		</script>
 	</body>
 </html> -->
-// function sum(firstNumber, secondNumber){
-//   const sum = firstNumber+secondNumber;
-//   return sum
-// }
-// sum(2,5);
-let movie = {
-  name : "Avenger",
-  getName(){
-    return this.name
-  }
-}
-movie.getName;
-// normal function
-// function speak (){
-//   console.log("speaking");
-// }
-// speak();
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>click</title>
+	</head>
+	<body>
+		<h1 id="text">YHO YHO YHO</h1>
+		<button>rgb app</button>
+		<script type="text/javascript">
+			let button = document. querySelector("button");
+			// button.onclick = function(){
+				// 	console.log("LFG");
+			// }
+			// button.onmouseenter = function(){
+				// 	console.log("bitch");
+			// }
+			// let scream = function(){
+				// 	console.log("AAAAAAAAAAAAA");
+			// }
+			// button.addEventListener("click", function(){
+				// 	console.log("we running");
+			// });
+			// button.addEventListener("click", function(){
+				// 	console.log("will I also run");
+			// });
+			let randomColor = () =>{
+				let r = Math.floor(Math.random()*255);
+				let g = Math.floor(Math.random()*255);
+				let b = Math.floor(Math.random()*255);
+				// console.log({r,g,b});
+				let consoleResult = `rgb(${r}, ${g}, ${b})`
+				return consoleResult;
+			}
+			randomColor();
+			button.addEventListener("click", (e)=>{
+				let color = randomColor();
+				// text = document.getElementById("text").innerText = color;
+				text = document.getElementById("text")
+				text.textContent = color;
+				text.style.color = color;
+				let color1 = randomColor();
+				// let body = document.querySelector("body");
+				let body = document.body;
+				body.style.backgroundColor = color1;
+			})
+			// event.target is the element itself
 
-// arrow function
-// let speak = () =>{
-//   console.log("speaking");
-// }
-// speak();
-
-//function inside an object
-// a function which is part of an object is called a method
-// const object = {
-//   speak: function () {
-//     console.log("speaking");
-//   },
-//   id: 123,
-//   name: "trinay",
-// };
-// object.speak();
-// object.name;
-
-// const object = {
-//   speak : () =>{
-//     console.log("LFG");
-//   },
-// }
-// object.speak();
-//functions are cricketers
-// methods are like batsmen or bowlers
-
-// arrays, objects, functions are all considered as objects.. but when we do typeOf a function it shows function but it is function object
-
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>event bubbling</title>
+		<style type="text/css">
+			#grandParent{
+					height: 500px;
+					width: 700px;
+					border: 8px solid black;
+					display: grid;
+					place-items: center;
+			}
+			#parent{
+					height: 300px;
+					width: 500px;
+					border: 8px solid lightblue;
+					display: grid;
+					place-items: center;
+			}
+			#child{
+					height: 100px;
+					width: 300px;
+					border: 8px solid lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="grandParent">
+			<div id="parent">
+				<div id="child">
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			let divs = document.querySelectorAll("div");
+			// console.log(divs);
+			divs.forEach((div) => {
+			// console.log(div);
+				div.addEventListener('click', (e)=>{
+					console.log("event clicked", e.currentTarget.id);
+					e.stopPropagation();
+					
+				}
+				,{
+					capture:false,
+					once:true,
+				}
+				)
+			})
+		</script>
+	</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>event delegation</title>
+		<style type="text/css">
+			li{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="container">
+			<li>Samsung</li>
+			<li>Apple</li>
+			<li>Dell</li>
+			<li>Asus</li>
+		</ul>
+		<script type="text/javascript">
+			let li = document.querySelectorAll("#container");
+			li.forEach((item) => {
+			item.addEventListener("click",(e) => {
+			let selected = e.target.innerText;
+			if(selected == "Apple"){
+				console.log("rich");
+			}
+			else if(selected == "Samsung"){
+				console.log("bitch");
+			}
+			else if(selected == "Asus"){
+				console.log("stfu");
+			}
+			else if(selected == "Dell"){
+				console.log("Alive?");
+			}
+			})
+			})
+		</script>
+	</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>append</title>
+</head>
+<body>
+	<ul id="moviesList">
+		<li>Dhoom</li>
+		<li>Dhoom 1 </li>
+		<li>Dhoom 2 </li>
+	</ul>
+	<script type="text/javascript">
+		let movies = [
+			"Spiderman",
+			"Avengers",
+			"Venom",
+			];
+		let moviesContainer = document.getElementById("moviesList");
+		let documentFrag = new DocumentFragment();
+		for(let movie of movies){
+			let li = document.createElement("li");
+			// li.textContent = movie;
+			li.innerText = movie;
+			documentFrag.append(li);
+			moviesContainer.append(documentFrag);
+		}
+	</script>
+</body>
+</html>
