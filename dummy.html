@@ -1706,34 +1706,48 @@
 		</script>
 	</body>
 </html> -->
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>append</title>
+	</head>
+	<body>
+		<ul id="moviesList">
+			<li>Dhoom</li>
+			<li>Dhoom 1 </li>
+			<li>Dhoom 2 </li>
+		</ul>
+		<script type="text/javascript">
+			let movies = [
+				"Spiderman",
+				"Avengers",
+				"Venom",
+				];
+			let moviesContainer = document.getElementById("moviesList");
+			let documentFrag = new DocumentFragment();
+			for(let movie of movies){
+				let li = document.createElement("li");
+				// li.textContent = movie;
+				li.innerText = movie;
+				documentFrag.append(li);
+				moviesContainer.append(documentFrag);
+			}
+		</script>
+	</body>
+</html> -->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>append</title>
-</head>
+	<title>broswer storage</title>
+</head> 
 <body>
-	<ul id="moviesList">
-		<li>Dhoom</li>
-		<li>Dhoom 1 </li>
-		<li>Dhoom 2 </li>
-	</ul>
-	<script type="text/javascript">
-		let movies = [
-			"Spiderman",
-			"Avengers",
-			"Venom",
-			];
-		let moviesContainer = document.getElementById("moviesList");
-		let documentFrag = new DocumentFragment();
-		for(let movie of movies){
-			let li = document.createElement("li");
-			// li.textContent = movie;
-			li.innerText = movie;
-			documentFrag.append(li);
-			moviesContainer.append(documentFrag);
-		}
-	</script>
+	<div>
+		 
+	</div>
+
 </body>
 </html>

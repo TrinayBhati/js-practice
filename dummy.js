@@ -1,4 +1,5 @@
 // normal function
+// functions are first clas citizens
 // function speak (){
 //   console.log("speaking");
 // }
@@ -71,19 +72,19 @@
 // object.speak();
 
 // let randomColor = () =>{
-// 			let r = Math.floor(Math.random()*255);
-// 			let g = Math.floor(Math.random()*255);
-// 			let b = math.floor(math.random()*255);
-// 		}
-// 		randomColor();
+//      let r = Math.floor(Math.random()*255);
+//      let g = Math.floor(Math.random()*255);
+//      let b = math.floor(math.random()*255);
+//    }
+//    randomColor();
 
 //event propagation
 // <div id="grandParent">
-// 		<div id="parent">
-// 			<div id="child">
-// 			</div>
-// 		</div>
-// 	</div>
+//    <div id="parent">
+//      <div id="child">
+//      </div>
+//    </div>
+//  </div>
 // event bubbling - bubble up - child parent grandParent
 // event capture - capture up - opposite of bubbling - grandParent parent child
 //addEventListener is an object can take multiple properties
@@ -150,23 +151,65 @@
 // bum(2,3,4,5,8,123);
 
 // destructuring
-let obj={
-  id:1,
-  name:"Trinay",
-  age:22,
-}
-// let id = obj.id;
-// let name = obj.name;
-// let age = obj.age;
-let { id,name, age} = obj;
-id;
-name;
-age;
+// let obj={
+//   id:1,
+//   name:"Trinay",
+//   age:22,
+// }
+// // let id = obj.id;
+// // let name = obj.name;
+// // let age = obj.age;
+// let { id:identity,name:naam, age:umar, height = 56} = obj;
+// identity;
+// naam;
+// umar;
+// height;
+// destructuting in arrays
+// let name =["trinay", "shourya", ];
+// // let myName = name[0];
+// // let broName = name[1];
+// let [myName , broName , anothername = "no clue"] = name;
+// myName;
+// broName;
+// anothername;
+// let name =["trinay", "shourya", ];
+// let [,broName] = name;
+// broName;
+// function fullName(item){
+//   // console.log(item.name, item.age);
+//   let {name, age} = item;
+//   console.log(name);
+//   console.log(age);
+// }
+// let properties = {
+//   name : "trinay",
+//   age : 22,
+// }
+// fullName(properties);
+// function greet(){
+//   console.log("HELLO");
+// }
+// let obj = {
+//   // greet :greet,
+//   greet, // this is called shorthand way same as above, same example below for a function
+//   // smile : function(){
+//   //   console.log("hehe");
+//   // }
+//   smile(){
+//     console.log("hehe");
+//   }
+// }
+// obj.smile();
+// obj.greet();
+// greet();
+// greet === obj.greet;
 
+//this keyword
+// to reuse a function using different objects
+// this -> object, this -> inside the function, look at function invocation to see where it is refering to
+// implicit binding -> whatever is on the left of the dot while invocation 
+//expliciti biinding -> when the function is called we us e.call and the thing inside call () is where this is refering to.
  
-
-
-
 
 
 
