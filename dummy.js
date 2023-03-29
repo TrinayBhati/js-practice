@@ -209,7 +209,11 @@
 // this -> object, this -> inside the function, look at function invocation to see where it is refering to
 // implicit binding -> whatever is on the left of the dot while invocation 
 //expliciti biinding -> when the function is called we us e.call and the thing inside call () is where this is refering to.
- 
+
+// event loop
+// single threaded language -> js can do only one thing at a time.  
+/// synchronous -> 
+
 
 
 
