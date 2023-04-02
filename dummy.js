@@ -72,19 +72,19 @@
 // object.speak();
 
 // let randomColor = () =>{
-//      let r = Math.floor(Math.random()*255);
-//      let g = Math.floor(Math.random()*255);
-//      let b = math.floor(math.random()*255);
-//    }
-//    randomColor();
+// 			let r = Math.floor(Math.random()*255);
+// 			let g = Math.floor(Math.random()*255);
+// 			let b = math.floor(math.random()*255);
+// 		}
+// 		randomColor();
 
 //event propagation
 // <div id="grandParent">
-//    <div id="parent">
-//      <div id="child">
-//      </div>
-//    </div>
-//  </div>
+// 		<div id="parent">
+// 			<div id="child">
+// 			</div>
+// 		</div>
+// 	</div>
 // event bubbling - bubble up - child parent grandParent
 // event capture - capture up - opposite of bubbling - grandParent parent child
 //addEventListener is an object can take multiple properties
@@ -131,14 +131,14 @@
 // let max = Math.max(...arr);
 // max;
 // function sum (a,b){
-//   return a+b;  
+//   return a+b;
 // }
 // let arr = [1,2,3,4,5];
 // sum(...arr);
 
 //rest operator
 // function run (a,b,...arr){// collecting the rest arguments, defined in function declaration
-//   console.log(arr);  
+//   console.log(arr);
 // }
 // run(2,3,4,5,6,7,);
 // function bum (...array){
@@ -207,13 +207,100 @@
 //this keyword
 // to reuse a function using different objects
 // this -> object, this -> inside the function, look at function invocation to see where it is refering to
-// implicit binding -> whatever is on the left of the dot while invocation 
+// implicit binding -> whatever is on the left of the dot while invocation
 //expliciti biinding -> when the function is called we us e.call and the thing inside call () is where this is refering to.
+// lexical binding -> arrow function has the same this of it's parent.
+// arrow function borrow the this keyword from it's immediete parent scope
+// when defining a var variable in global scope it always get added to the windows object, it polluttes the global name space.
+
+//prototype
+// let person = {};
+// person.name = "luffy";
+// person.age = 18;
+// person.namee = function(){
+//   console.log(this.name);
+// }
+// person.namee();
+
+// let person ={
+// 	name : "lkhj",
+// 	age:22,
+// 	yo(){
+// 		console.log(`waddup ${this.name}`);
+// 	},
+// }
+// person.yo();
+// function Person(name, age){
+// 	let person = {};
+// 	person.name = name;
+// 	person.age = age;
+// 	person.work = function () {
+// 	console.log(`hello ${this.name}`);
+// }
+// 	return person; 
+// //generic method below
+// // 	let person = {
+// // 		name : name,
+// // 		age : age,
+// // 		work : function(){
+// // 			console.log(`hello ${this.name}`);
+// // 		}
+// // 	}
+// // 	return person;
+// }
+// let personOne = Person("Trinay", 22);
+// console.log(personOne)
+// personOne.work();
+
+// let sharedMethods = {
+// 		work : function () {
+// 			console.log(`hello ${this.name}`);
+//     }
+// }
+// function Person(name, age) {
+
+// 		let person = {}
+// 		person.name = name;
+// 		person.age = age;
+// 		person.work = sharedMethods.work;
+// 		return person;
+
+// 		//generic method
+
+// 		// let person = {
+// 		// 	name : name,
+// 		// age : age,
+// 		// work : sharedMethods.work,
+// 		// }
+// 		// return person;
+// 	}
+// 	let personOne = Person("Papu",22);
+// 	personOne.work();
+
+
+// let Parent = {
+// 		name : "idk",
+// 		age : 12,
+//   //work(){	console.log(` ${this}.name is working`),}
+// 		work : function(){
+// 			console.log(`${this}.name is working`),
+// 		},
+// 	};
+// 	let child = Object.create(Parent);  // creates a new empty object
+// // delegates failed look ups to parent
+// 	console.log(child);
+
+// prototype is an object which is present in every function main funcction is to have the collection of all the methods which can be used by the object which was created by this function
+function Person(name, age){
+  let person = Object.create(Person.prototype);
+  person.name = name;
+  person.age = age;
+  return person
+}
+Person.prototype.work = function(){
+  console.log(`${this.name} is working`);
+}
 
 // event loop
-// single threaded language -> js can do only one thing at a time.  
-/// synchronous -> 
-
-
-
-
+// single threaded language -> js can do only one thing at a time.
+// synchronous ->
