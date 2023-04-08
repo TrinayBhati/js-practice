@@ -72,19 +72,19 @@
 // object.speak();
 
 // let randomColor = () =>{
-// 			let r = Math.floor(Math.random()*255);
-// 			let g = Math.floor(Math.random()*255);
-// 			let b = math.floor(math.random()*255);
-// 		}
-// 		randomColor();
+//      let r = Math.floor(Math.random()*255);
+//      let g = Math.floor(Math.random()*255);
+//      let b = math.floor(math.random()*255);
+//    }
+//    randomColor();
 
 //event propagation
 // <div id="grandParent">
-// 		<div id="parent">
-// 			<div id="child">
-// 			</div>
-// 		</div>
-// 	</div>
+//    <div id="parent">
+//      <div id="child">
+//      </div>
+//    </div>
+//  </div>
 // event bubbling - bubble up - child parent grandParent
 // event capture - capture up - opposite of bubbling - grandParent parent child
 //addEventListener is an object can take multiple properties
@@ -223,102 +223,160 @@
 // person.namee();
 
 // let person ={
-// 	name : "lkhj",
-// 	age:22,
-// 	yo(){
-// 		console.log(`waddup ${this.name}`);
-// 	},
+//  name : "lkhj",
+//  age:22,
+//  yo(){
+//    console.log(`waddup ${this.name}`);
+//  },
 // }
 // person.yo();
 // function Person(name, age){
-// 	let person = {};
-// 	person.name = name;
-// 	person.age = age;
-// 	person.work = function () {
-// 	console.log(`hello ${this.name}`);
+//  let person = {};
+//  person.name = name;
+//  person.age = age;
+//  person.work = function () {
+//  console.log(`hello ${this.name}`);
 // }
-// 	return person; 
+//  return person; 
 // //generic method below
-// // 	let person = {
-// // 		name : name,
-// // 		age : age,
-// // 		work : function(){
-// // 			console.log(`hello ${this.name}`);
-// // 		}
-// // 	}
-// // 	return person;
+// //   let person = {
+// //     name : name,
+// //     age : age,
+// //     work : function(){
+// //       console.log(`hello ${this.name}`);
+// //     }
+// //   }
+// //   return person;
 // }
 // let personOne = Person("Trinay", 22);
 // console.log(personOne)
 // personOne.work();
 
 // let sharedMethods = {
-// 		work : function () {
-// 			console.log(`hello ${this.name}`);
+//    work : function () {
+//      console.log(`hello ${this.name}`);
 //     }
 // }
 // function Person(name, age) {
 
-// 		let person = {}
-// 		person.name = name;
-// 		person.age = age;
-// 		person.work = sharedMethods.work;
-// 		return person;
+//    let person = {}
+//    person.name = name;
+//    person.age = age;
+//    person.work = sharedMethods.work;
+//    return person;
 
-// 		//generic method
+//    //generic method
 
-// 		// let person = {
-// 		// 	name : name,
-// 		// age : age,
-// 		// work : sharedMethods.work,
-// 		// }
-// 		// return person;
-// 	}
-// 	let personOne = Person("Papu",22);
-// 	personOne.work();
+//    // let person = {
+//    //  name : name,
+//    // age : age,
+//    // work : sharedMethods.work,
+//    // }
+//    // return person;
+//  }
+//  let personOne = Person("Papu",22);
+//  personOne.work();
 
 
 // let Parent = {
-// 		name : "idk",
-// 		age : 12,
-//   //work(){	console.log(` ${this}.name is working`),}
-// 		work : function(){
-// 			console.log(`${this}.name is working`),
-// 		},
-// 	};
-// 	let child = Object.create(Parent);  // creates a new empty object
+//    name : "idk",
+//    age : 12,
+//   //work(){  console.log(` ${this}.name is working`),}
+//    work : function(){
+//      console.log(`${this}.name is working`),
+//    },
+//  };
+//  let child = Object.create(Parent);  // creates a new empty object
 // // delegates failed look ups to parent
-// 	console.log(child);
+//  console.log(child);
 
 // prototype is an object which is present in every function main funcction is to have the collection of all the methods which can be used by the object which was created by this function
-function Person(name, age){
-  let person = Object.create(Person.prototype);
-  person.name = name;
-  person.age = age;
-  return person
-}
-Person.prototype.work = function(){
-  console.log(`${this.name} is working`);
-}
+// function Person(name, age){
+//   let person = Object.create(Person.prototype);
+//   person.name = name;
+//   person.age = age;
+//   return person
+// }
+// Person.prototype.work = function(){
+//   console.log(`${this.name} is working`);
+// }
 
 // event loop
 // single threaded language -> js can do only one thing at a time.
-// synchronous ->
+// synchronous 
 
 
 
+// closure
+// when a function uses a variable declared outside is called closure
+    // const users = ["Alice", "Dan", "Pop"];
+    // const query = "D";
+    // const user = users.filter((item) => item.startsWith(query));
+    // console.log(user);
+//function has a closure over a variable
+// a function
+// once we mak ea variable inside a function so what happens is that when we return from that function the garbage collector removes the variables from storage.
+// but if another function is being closed on that variable then it won't be removed as it's being used by another variable
 
+//memory efficiency
+    // function heavyDuty(){
+    //   let bigArray = new Array(7000).fill("LFG");
+    //   console.log("Array Created");
+    //   return bigArray(index);
+    // }
+    // console.log(heavyDuty(700));
+    // console.log(heavyDuty(4000));
+// what this is doing is creating a big array every time and removing it which is not efficient
 
+//IIFY -> Immedietly invoked function expression
+    // (function(){
+    //   console.log("greet");
+    // })();
+// incase of arguments
+    // ((name)=>{
+    //   console.log("hello " + name);
+    // })("Trinay");
 
+// let froot = (arr)=>{
+//   let num = Math.floor(Math.random()*4);
+//   return array[num]
+// }
+// let array = ["rock", "paper", "scissor"]
+// froot(array);
+// function getComputerChoice() {
+//   let num = Math.floor(Math.random()*3);
+//   let array = ["rock", "paper", "scissors"];
+//   return array[num];
+// }
+// getComputerChoice();
+// function getResult(playerChoice, computerChoice) {
+//   if(playerChoice == "rock"&& computerChoice=="scissors"){
+//     return 1;
+//   }
+//   else{
+//     return -1
+//   }
+// }
+// getResult("rock", "scissors")
 
+// function getResult(playerChoice, computerChoice) {
+  
+//   if(playerChoice == computerChoice){
+//     return 0;
+//   }
+//   else if((playerChoice == "rock" && computerChoice =="scissors") || (playerChoice == "paper" && computerChoice =="rock") || (playerChoice == "scissors" && computerChoice =="paper") ){
+//     return 1;
+//   }
+//   else{
+//     return -1;
+//   }
+// }
+// getResult( "paper","rock");
 
-
-
-
-
-
-
-
+// promise is an object
+// have 3 states -> pending, fullfilled, rejected
+// pending intitial stage
+// pending can change from fullfilled or rejected
 
 
 
