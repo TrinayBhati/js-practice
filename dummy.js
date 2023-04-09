@@ -559,3 +559,60 @@ loginUser(
     console.log("Error");
   }
 );
+
+
+
+
+
+
+
+
+
+
+let user = {
+
+firstName: 'naman',
+
+lastName: 'jindal',
+
+age: 10,
+
+courseList: [],
+
+/* key value itself */
+
+/*
+
+arrow functions do not have their own binding of this ->
+
+if we are usign arrow functions in that case it matters where the function defination
+
+exists, we will be going up the heirarchy to find the parent having its own this and
+
+that will act as the value of this for that arrow function
+
+whereas in the case of normal functions it matter how that function is getting called.
+
+*/
+
+buyCourse: (courseName) =>{
+
+console.log(this) //window
+
+this.courseList.push(courseName);
+
+},
+
+getCourse: function(){
+
+//console.log(this) ->
+
+console.log(this.courseList)
+
+}
+
+}
+
+user.buyCourse('react'); //
+
+user.getCourse(); //
