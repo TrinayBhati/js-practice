@@ -4,7 +4,7 @@
 //   console.log("speaking");
 // }
 // speak();
-
+ 
 // arrow function
 // let speak = () =>{
 //   console.log("speaking");
