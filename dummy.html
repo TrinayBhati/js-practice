@@ -1740,14 +1740,31 @@
 		</script>
 	</body>
 </html> -->
-<script>
+<!-- <script>
 	Math.floor(match.random()*arr.length);
 	let a =
 </script> 
-
-
-
-
-
-
-
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>api</title>
+	</head>
+	<body>
+		<div id="dog">
+		</div>
+		<button id="btn">DOG</button>
+<script type="text/javascript">
+				let click = ()=>{
+					let dog = document.getElementById("dog");
+				fetch("https://dog.ceo/api/breeds/image/random").then(response => response.json()).then(json =>{
+						dog.innerHTML = `<img src = "${json.message}" height=700 >`
+				});
+				}
+				let btn = document.getElementById("btn");
+				btn.addEventListener("click", click);
+</script>
+	</body>
+</html>
