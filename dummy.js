@@ -1,3 +1,51 @@
+// Expressions
+
+// "string";
+// 1;
+// true;
+// false;
+// null;
+// undefined;
+// NaN;
+// [1,2,3];
+// ({id: 1});
+
+// function greet() {
+//   return "Hello"
+// }
+
+// greet()
+
+// 5 * 10
+// 10 + 8 / 1 * 10
+
+// 10 > 9
+// 10 === 11
+// 9 <= 1 
+// "a" == "a"
+
+// const isHappy = null
+// isHappy ? "🍎" : "🔥"
+
+// && || !
+// true && "one"
+// false && true
+
+// "hey" || null
+
+// !"hey"
+
+// Convert a value to boolean
+// !!null
+// Boolean(null)
+
+// "HELLO".toLowerCase()
+// [1,2,3].includes(1)
+// [1,2,3,4].map(element => element * 2)
+// filter, some, find, findIndex
+
+//===================================================
+
 //const users = ["Alice", "Dan", "Jessica"];
           // const query = "A";
 
@@ -279,19 +327,19 @@
 // object.speak();
 
 // let randomColor = () =>{
-//          let r = Math.floor(Math.random()*255);
-//          let g = Math.floor(Math.random()*255);
-//          let b = math.floor(math.random()*255);
-//      }
-//      randomColor();
+// 			let r = Math.floor(Math.random()*255);
+// 			let g = Math.floor(Math.random()*255);
+// 			let b = math.floor(math.random()*255);
+// 		}
+// 		randomColor();
 
 //event propagation
 // <div id="grandParent">
-//      <div id="parent">
-//          <div id="child">
-//          </div>
-//      </div>
-//  </div>
+// 		<div id="parent">
+// 			<div id="child">
+// 			</div>
+// 		</div>
+// 	</div>
 // event bubbling - bubble up - child parent grandParent
 // event capture - capture up - opposite of bubbling - grandParent parent child
 //addEventListener is an object can take multiple properties
@@ -430,72 +478,72 @@
 // person.namee();
 
 // let person ={
-//  name : "lkhj",
-//  age:22,
-//  yo(){
-//      console.log(`waddup ${this.name}`);
-//  },
+// 	name : "lkhj",
+// 	age:22,
+// 	yo(){
+// 		console.log(`waddup ${this.name}`);
+// 	},
 // }
 // person.yo();
 // function Person(name, age){
-//  let person = {};
-//  person.name = name;
-//  person.age = age;
-//  person.work = function () {
-//  console.log(`hello ${this.name}`);
+// 	let person = {};
+// 	person.name = name;
+// 	person.age = age;
+// 	person.work = function () {
+// 	console.log(`hello ${this.name}`);
 // }
-//  return person; 
+// 	return person; 
 // //generic method below
-// //   let person = {
-// //       name : name,
-// //       age : age,
-// //       work : function(){
-// //           console.log(`hello ${this.name}`);
-// //       }
-// //   }
-// //   return person;
+// // 	let person = {
+// // 		name : name,
+// // 		age : age,
+// // 		work : function(){
+// // 			console.log(`hello ${this.name}`);
+// // 		}
+// // 	}
+// // 	return person;
 // }
 // let personOne = Person("Trinay", 22);
 // console.log(personOne)
 // personOne.work();
 
 // let sharedMethods = {
-//      work : function () {
-//          console.log(`hello ${this.name}`);
+// 		work : function () {
+// 			console.log(`hello ${this.name}`);
 //     }
 // }
 // function Person(name, age) {
 
-//      let person = {}
-//      person.name = name;
-//      person.age = age;
-//      person.work = sharedMethods.work;
-//      return person;
+// 		let person = {}
+// 		person.name = name;
+// 		person.age = age;
+// 		person.work = sharedMethods.work;
+// 		return person;
 
-//      //generic method
+// 		//generic method
 
-//      // let person = {
-//      //  name : name,
-//      // age : age,
-//      // work : sharedMethods.work,
-//      // }
-//      // return person;
-//  }
-//  let personOne = Person("Papu",22);
-//  personOne.work();
+// 		// let person = {
+// 		// 	name : name,
+// 		// age : age,
+// 		// work : sharedMethods.work,
+// 		// }
+// 		// return person;
+// 	}
+// 	let personOne = Person("Papu",22);
+// 	personOne.work();
 
 
 // let Parent = {
-//      name : "idk",
-//      age : 12,
-//   //work(){  console.log(` ${this}.name is working`),}
-//      work : function(){
-//          console.log(`${this}.name is working`),
-//      },
-//  };
-//  let child = Object.create(Parent);  // creates a new empty object
+// 		name : "idk",
+// 		age : 12,
+//   //work(){	console.log(` ${this}.name is working`),}
+// 		work : function(){
+// 			console.log(`${this}.name is working`),
+// 		},
+// 	};
+// 	let child = Object.create(Parent);  // creates a new empty object
 // // delegates failed look ups to parent
-//  console.log(child);
+// 	console.log(child);
 
 // prototype is an object which is present in every function main funcction is to have the collection of all the methods which can be used by the object which was created by this function
 // function Person(name, age){
@@ -737,3 +785,5 @@
 // type= module in script makes it importable and exportable
 // import(sum as add) export(sum, city) export default hobbies import dumm import * as user from "./location.js" now it'll give user object use it as user.smthn
 
+// npm install or i lodash
+// npm run dev
