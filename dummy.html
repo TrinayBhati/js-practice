@@ -1745,7 +1745,7 @@
 	let a =
 </script> 
  -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -1756,15 +1756,42 @@
 		<div id="dog">
 		</div>
 		<button id="btn">DOG</button>
-<script type="text/javascript">
-				let click = ()=>{
-					let dog = document.getElementById("dog");
-				fetch("https://dog.ceo/api/breeds/image/random").then(response => response.json()).then(json =>{
-						dog.innerHTML = `<img src = "${json.message}" height=700 >`
-				});
-				}
-				let btn = document.getElementById("btn");
-				btn.addEventListener("click", click);
-</script>
+		<script type="text/javascript">
+			let click = ()=>{
+			let dog = document.getElementById("dog");
+			fetch("https://dog.ceo/api/breeds/image/random").then(response => response.json()).then(json =>{
+			dog.innerHTML = `<img src = "${json.message}" height=700 >`
+			});
+			}
+			let btn = document.getElementById("btn");
+			btn.addEventListener("click", click);
+		</script>
 	</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>superhero api</title>
+	<style>
+		div{
+			color: #32a852 ;
+		}p
+	</style>
+  </head>
+  <body>
+    <div id="hero"></div>
+	
+    <script type="text/javascript">
+      let superHero = (id) => {
+        let url = "https://superheroapi.com/api.php/1646172935846068";
+
+        fetch(`${url}/${id}`)
+          .then((response) => response.json())
+          .then((json) => console.log(json));
+      };
+      superHero(245);
+    </script>
+  </body>
 </html>

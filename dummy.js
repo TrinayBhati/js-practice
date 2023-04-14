@@ -735,3 +735,5 @@
 // console.log(Account.returnTotalBalance());
 
 // type= module in script makes it importable and exportable
+// import(sum as add) export(sum, city) export default hobbies import dumm import * as user from "./location.js" now it'll give user object use it as user.smthn
+
