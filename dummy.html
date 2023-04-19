@@ -1768,32 +1768,60 @@
 		</script>
 	</body>
 </html> -->
-<!DOCTYPE html>
+<!-- <script>
+	fetch( "https://reqres.in/api/users").then(response => {
+		if (response.ok){
+			console.log("success");
+		}
+		else{
+			console.log("not successful")
+		}
+	}).then(data =>console.log(data)).catch(error => console.log("error"));
+</script> -->
+<!-- <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>superhero api</title>
-	<style>
-		div{
-			color: #32a852 ;
-		}p
-	</style>
-  </head>
-  <body>
-    <div id="hero"></div>
-	
-    <script type="text/javascript">
-      let superHero = (id) => {
-        let url = "https://superheroapi.com/api.php/1646172935846068";
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>superhero api</title>
+	</head>
+	<body>
+		<button id="btn">Random Hero</button>
+		<input type="text" id="inputHero" placeholder="Hero name">
+		<button id="btnTwo">Search Hero</button>
+		<div id="heroName"></div>
+		<div id="hero"></div>
+		
+		<script type="text/javascript">
 
-        fetch(`${url}/${id}`)
-          .then((response) => response.json())
-          .then((json) => console.log(json));
-      };
-      superHero();
-    </script>
-  </body>
-</html>
+		let url = "https://superheroapi.com/api.php";
+		let key = "1646172935846068";
+		let inputHero = document.getElementById("inputHero");
+		let random = ()=>{
+			return Math.floor(Math.random()*731)+1;
+			}
+		let superHero = (id) => {
+		let heroId = random();
+		
+		fetch(`${url}/${key}/${heroId}`)
+		.then((response) => response.json())
+		.then((json) => {
+			document.getElementById("heroName").innerText = json.name;
+			document.getElementById("hero").innerHTML =`<img src="${json.image.url}" >`;
+		});
+		};
+		document.getElementById("btn").addEventListener("click" , superHero);
+		let search= ()=>{
+			fetch(`${url}/${key}/search/${inputHero.value}`).then(response => response.json()).then(json =>{
+				let hero = json.results[0];
+				document.getElementById("hero").innerHTML =`<img src="${hero.image.url}" >`;
+				document.getElementById("heroName").innerText = hero.name;
+			});
+		}
+		document.getElementById("btnTwo").addEventListener("click" , search);
+		
+		</script>
+	</body>
+</html> -->
 
    
