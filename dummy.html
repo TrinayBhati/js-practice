@@ -1815,7 +1815,7 @@
 			fetch(`${url}/${key}/search/${inputHero.value}`).then(response => response.json()).then(json =>{
 				let hero = json.results[0];
 				document.getElementById("hero").innerHTML =`<img src="${hero.image.url}" >`;
-				document.getElementById("heroName").innerText = hero.name;
+				document.getElementById("heroName").innerText =  hero.name;
 			});
 		}
 		document.getElementById("btnTwo").addEventListener("click" , search);
@@ -1823,5 +1823,5 @@
 		</script>
 	</body>
 </html> -->
-
+ 
    
