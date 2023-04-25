@@ -21,7 +21,7 @@
 
 // 10 > 9
 // 10 === 11
-// 9 <= 1 
+// 9 <= 1
 // "a" == "a"
 
 // const isHappy = null
@@ -47,209 +47,206 @@
 //===================================================
 
 //const users = ["Alice", "Dan", "Jessica"];
-          // const query = "A";
+// const query = "A";
 
-          // const user = users.filter((item) => item.startsWith(query));
+// const user = users.filter((item) => item.startsWith(query));
 
-          // console.log(user);
+// console.log(user);
 
-          // // Function has a closure over a variable
-          // // or
-          // // A function closes over a variable
+// // Function has a closure over a variable
+// // or
+// // A function closes over a variable
 
-          // /************************************************/
+// /************************************************/
 
-          // // Lexical Scope
+// // Lexical Scope
 
-          // function outermost() {
-          //   const user = "Deadpool";
-          //   function inner() {
-          //     function innerMost() {
-          //       const score = 100;
-          //     }
-          //   }
-          // }
+// function outermost() {
+//   const user = "Deadpool";
+//   function inner() {
+//     function innerMost() {
+//       const score = 100;
+//     }
+//   }
+// }
 
-          // /************************************************/
+// /************************************************/
 
-          // // Garbage Collector
-          // function liveAday() {
-          //   const food = "cheese";
-          //   const one = 1;
-          //   const two = 2;
-          //   function eat() {
-          //     console.log("Eating...", food);
-          //   }
-          //   return eat;
-          // }
+// // Garbage Collector
+// function liveAday() {
+//   const food = "cheese";
+//   const one = 1;
+//   const two = 2;
+//   function eat() {
+//     console.log("Eating...", food);
+//   }
+//   return eat;
+// }
 
-          // const innerFunction = liveAday();
+// const innerFunction = liveAday();
 
-          // /************************************************/
+// /************************************************/
 
+// // Memory Efficiency
+// // function heavyDuty(index) {
+// //   const bigArray = new Array(7000).fill("🔥");
+// //   console.log("Array Created");
+// //   return bigArray[index];
+// // }
 
-          // // Memory Efficiency
-          // // function heavyDuty(index) {
-          // //   const bigArray = new Array(7000).fill("🔥");
-          // //   console.log("Array Created");
-          // //   return bigArray[index];
-          // // }
+// // console.log(heavyDuty(700));
+// // console.log(heavyDuty(100));
+// // console.log(heavyDuty(100));
+// // console.log(heavyDuty(100));
+// // console.log(heavyDuty(100));
+// // console.log(heavyDuty(100));
 
-          // // console.log(heavyDuty(700));
-          // // console.log(heavyDuty(100));
-          // // console.log(heavyDuty(100));
-          // // console.log(heavyDuty(100));
-          // // console.log(heavyDuty(100));
-          // // console.log(heavyDuty(100));
+// function heavyDuty2() {
+//   const bigArray = new Array(7000).fill("🔥");
+//   console.log("Array Created");
+//   return function (index) {
+//     return bigArray[index];
+//   };
+// }
 
-          // function heavyDuty2() {
-          //   const bigArray = new Array(7000).fill("🔥");
-          //   console.log("Array Created");
-          //   return function (index) {
-          //     return bigArray[index];
-          //   };
-          // }
+// const getHeavyDuty = heavyDuty2();
+// getHeavyDuty(1);
+// getHeavyDuty(87);
+// getHeavyDuty(99);
 
-          // const getHeavyDuty = heavyDuty2();
-          // getHeavyDuty(1);
-          // getHeavyDuty(87);
-          // getHeavyDuty(99);
+// /************************************************/
 
-          // /************************************************/
+// // Closures
 
-          // // Closures
+// // Encapsulation & Abstraction
 
-          // // Encapsulation & Abstraction
+// const rahulSalary = (function () {
+//   let salary = 60000;
 
-          // const rahulSalary = (function () {
-          //   let salary = 60000;
+//   function changeBy(amount) {
+//     salary += amount;
+//   }
 
-          //   function changeBy(amount) {
-          //     salary += amount;
-          //   }
+//   return {
+//     raise: function () {
+//       changeBy(5000);
+//     },
+//     lower: function () {
+//       changeBy(-10000);
+//     },
+//     currentAmount: function () {
+//       return salary;
+//     },
+//   };
+// })();
 
-          //   return {
-          //     raise: function () {
-          //       changeBy(5000);
-          //     },
-          //     lower: function () {
-          //       changeBy(-10000);
-          //     },
-          //     currentAmount: function () {
-          //       return salary;
-          //     },
-          //   };
-          // })();
+// console.log(rahulSalary.currentAmount());
+// rahulSalary.raise();
+// console.log(rahulSalary.currentAmount());
+// rahulSalary.lower();
+// console.log(rahulSalary.currentAmount());
 
-          // console.log(rahulSalary.currentAmount());
-          // rahulSalary.raise();
-          // console.log(rahulSalary.currentAmount());
-          // rahulSalary.lower();
-          // console.log(rahulSalary.currentAmount());
+// // Callbacks
+// function getVideoDetails(videos, callback) {
+//   // Network Call to the backend with videos
+//   setTimeout(() => {
+//     callback({ id: 1, title: "Hey Jack!", duration: 10 });
+//   }, 1500);
+// }
 
-          // // Callbacks
-          // function getVideoDetails(videos, callback) {
-          //   // Network Call to the backend with videos
-          //   setTimeout(() => {
-          //     callback({ id: 1, title: "Hey Jack!", duration: 10 });
-          //   }, 1500);
-          // }
+// function getUserVideos(email, callback, errorCallback) {
+//   // Network Call to the backend with email
+//   setTimeout(() => {
+//     callback(["video1", "video2", "video3"]);
+//   }, 1500);
+// }
 
-          // function getUserVideos(email, callback, errorCallback) {
-          //   // Network Call to the backend with email
-          //   setTimeout(() => {
-          //     callback(["video1", "video2", "video3"]);
-          //   }, 1500);
-          // }
+// function loginUser(email, password, successCallback, errorCallback) {
+//   // Network Call to the backend with email and password
+//   setTimeout(() => {
+//     let error = true;
+//     if (error) {
+//       errorCallback("Network call Unsuccessful!");
+//     } else {
+//       success({ userEmail: email });
+//     }
+//   }, 1500);
+// }
 
-          // function loginUser(email, password, successCallback, errorCallback) {
-          //   // Network Call to the backend with email and password
-          //   setTimeout(() => {
-          //     let error = true;
-          //     if (error) {
-          //       errorCallback("Network call Unsuccessful!");
-          //     } else {
-          //       success({ userEmail: email });
-          //     }
-          //   }, 1500);
-          // }
+// loginUser(
+//   "david@gmail.com",
+//   12345,
+//   (userObject) => {
+//     getUserVideos(
+//       userObject.email,
+//       (videos) => {
+//         getVideoDetails(
+//           videos,
+//           () => {
+//             console.log(videos);
+//           },
+//           () => {
+//             console.log("Error");
+//           }
+//         );
+//       },
+//       (error) => {
+//         console.log("Error");
+//       }
+//     );
+//   },
+//   (error) => {
+//     console.log("Error");
+//   }
+// );
 
-          // loginUser(
-          //   "david@gmail.com",
-          //   12345,
-          //   (userObject) => {
-          //     getUserVideos(
-          //       userObject.email,
-          //       (videos) => {
-          //         getVideoDetails(
-          //           videos,
-          //           () => {
-          //             console.log(videos);
-          //           },
-          //           () => {
-          //             console.log("Error");
-          //           }
-          //         );
-          //       },
-          //       (error) => {
-          //         console.log("Error");
-          //       }
-          //     );
-          //   },
-          //   (error) => {
-          //     console.log("Error");
-          //   }
-          // );
+// let user = {
 
+// firstName: 'naman',
 
-          // let user = {
+// lastName: 'jindal',
 
-          // firstName: 'naman',
+// age: 10,
 
-          // lastName: 'jindal',
+// courseList: [],
 
-          // age: 10,
+// /* key value itself */
 
-          // courseList: [],
+// /*
 
-          // /* key value itself */
+// arrow functions do not have their own binding of this ->
 
-          // /*
+// if we are usign arrow functions in that case it matters where the function defination
 
-          // arrow functions do not have their own binding of this ->
+// exists, we will be going up the heirarchy to find the parent having its own this and
 
-          // if we are usign arrow functions in that case it matters where the function defination
+// that will act as the value of this for that arrow function
 
-          // exists, we will be going up the heirarchy to find the parent having its own this and
+// whereas in the case of normal functions it matter how that function is getting called.
 
-          // that will act as the value of this for that arrow function
+// */
 
-          // whereas in the case of normal functions it matter how that function is getting called.
+// buyCourse: (courseName) =>{
 
-          // */
+// console.log(this) //window
 
-          // buyCourse: (courseName) =>{
+// this.courseList.push(courseName);
 
-          // console.log(this) //window
+// },
 
-          // this.courseList.push(courseName);
+// getCourse: function(){
 
-          // },
+// //console.log(this) ->
 
-          // getCourse: function(){
+// console.log(this.courseList)
 
-          // //console.log(this) ->
+// }
 
-          // console.log(this.courseList)
+// }
 
-          // }
+// user.buyCourse('react'); //
 
-          // }
-
-          // user.buyCourse('react'); //
-
-          // user.getCourse(); //
-
+// user.getCourse(); //
 
 //============= practice =====================
 
@@ -327,19 +324,19 @@
 // object.speak();
 
 // let randomColor = () =>{
-// 			let r = Math.floor(Math.random()*255);
-// 			let g = Math.floor(Math.random()*255);
-// 			let b = math.floor(math.random()*255);
-// 		}
-// 		randomColor();
+//          let r = Math.floor(Math.random()*255);
+//          let g = Math.floor(Math.random()*255);
+//          let b = math.floor(math.random()*255);
+//      }
+//      randomColor();
 
 //event propagation
 // <div id="grandParent">
-// 		<div id="parent">
-// 			<div id="child">
-// 			</div>
-// 		</div>
-// 	</div>
+//      <div id="parent">
+//          <div id="child">
+//          </div>
+//      </div>
+//  </div>
 // event bubbling - bubble up - child parent grandParent
 // event capture - capture up - opposite of bubbling - grandParent parent child
 //addEventListener is an object can take multiple properties
@@ -478,72 +475,71 @@
 // person.namee();
 
 // let person ={
-// 	name : "lkhj",
-// 	age:22,
-// 	yo(){
-// 		console.log(`waddup ${this.name}`);
-// 	},
+//  name : "lkhj",
+//  age:22,
+//  yo(){
+//      console.log(`waddup ${this.name}`);
+//  },
 // }
 // person.yo();
 // function Person(name, age){
-// 	let person = {};
-// 	person.name = name;
-// 	person.age = age;
-// 	person.work = function () {
-// 	console.log(`hello ${this.name}`);
+//  let person = {};
+//  person.name = name;
+//  person.age = age;
+//  person.work = function () {
+//  console.log(`hello ${this.name}`);
 // }
-// 	return person; 
+//  return person;
 // //generic method below
-// // 	let person = {
-// // 		name : name,
-// // 		age : age,
-// // 		work : function(){
-// // 			console.log(`hello ${this.name}`);
-// // 		}
-// // 	}
-// // 	return person;
+// //   let person = {
+// //       name : name,
+// //       age : age,
+// //       work : function(){
+// //           console.log(`hello ${this.name}`);
+// //       }
+// //   }
+// //   return person;
 // }
 // let personOne = Person("Trinay", 22);
 // console.log(personOne)
 // personOne.work();
 
 // let sharedMethods = {
-// 		work : function () {
-// 			console.log(`hello ${this.name}`);
+//      work : function () {
+//          console.log(`hello ${this.name}`);
 //     }
 // }
 // function Person(name, age) {
 
-// 		let person = {}
-// 		person.name = name;
-// 		person.age = age;
-// 		person.work = sharedMethods.work;
-// 		return person;
+//      let person = {}
+//      person.name = name;
+//      person.age = age;
+//      person.work = sharedMethods.work;
+//      return person;
 
-// 		//generic method
+//      //generic method
 
-// 		// let person = {
-// 		// 	name : name,
-// 		// age : age,
-// 		// work : sharedMethods.work,
-// 		// }
-// 		// return person;
-// 	}
-// 	let personOne = Person("Papu",22);
-// 	personOne.work();
-
+//      // let person = {
+//      //  name : name,
+//      // age : age,
+//      // work : sharedMethods.work,
+//      // }
+//      // return person;
+//  }
+//  let personOne = Person("Papu",22);
+//  personOne.work();
 
 // let Parent = {
-// 		name : "idk",
-// 		age : 12,
-//   //work(){	console.log(` ${this}.name is working`),}
-// 		work : function(){
-// 			console.log(`${this}.name is working`),
-// 		},
-// 	};
-// 	let child = Object.create(Parent);  // creates a new empty object
+//      name : "idk",
+//      age : 12,
+//   //work(){  console.log(` ${this}.name is working`),}
+//      work : function(){
+//          console.log(`${this}.name is working`),
+//      },
+//  };
+//  let child = Object.create(Parent);  // creates a new empty object
 // // delegates failed look ups to parent
-// 	console.log(child);
+//  console.log(child);
 
 // prototype is an object which is present in every function main funcction is to have the collection of all the methods which can be used by the object which was created by this function
 // function Person(name, age){
@@ -558,39 +554,37 @@
 
 // event loop
 // single threaded language -> js can do only one thing at a time.
-// synchronous 
-
-
+// synchronous
 
 // closure
 // when a function uses a variable declared outside is called closure
-    // const users = ["Alice", "Dan", "Pop"];
-    // const query = "D";
-    // const user = users.filter((item) => item.startsWith(query));
-    // console.log(user);
+// const users = ["Alice", "Dan", "Pop"];
+// const query = "D";
+// const user = users.filter((item) => item.startsWith(query));
+// console.log(user);
 //function has a closure over a variable
 // a function
 // once we mak ea variable inside a function so what happens is that when we return from that function the garbage collector removes the variables from storage.
 // but if another function is being closed on that variable then it won't be removed as it's being used by another variable
 
 //memory efficiency
-    // function heavyDuty(){
-    //   let bigArray = new Array(7000).fill("LFG");
-    //   console.log("Array Created");
-    //   return bigArray(index);
-    // }
-    // console.log(heavyDuty(700));
-    // console.log(heavyDuty(4000));
+// function heavyDuty(){
+//   let bigArray = new Array(7000).fill("LFG");
+//   console.log("Array Created");
+//   return bigArray(index);
+// }
+// console.log(heavyDuty(700));
+// console.log(heavyDuty(4000));
 // what this is doing is creating a big array every time and removing it which is not efficient
 
 //IIFY -> Immedietly invoked function expression
-    // (function(){
-    //   console.log("greet");
-    // })();
+// (function(){
+//   console.log("greet");
+// })();
 // incase of arguments
-    // ((name)=>{
-    //   console.log("hello " + name);
-    // })("Trinay");
+// ((name)=>{
+//   console.log("hello " + name);
+// })("Trinay");
 
 // let froot = (arr)=>{
 //   let num = Math.floor(Math.random()*4);
@@ -615,7 +609,7 @@
 // getResult("rock", "scissors")
 
 // function getResult(playerChoice, computerChoice) {
-  
+
 //   if(playerChoice == computerChoice){
 //     return 0;
 //   }
@@ -646,7 +640,7 @@
 //       resolve("Noodles recieved"); // pending -> fullfill
 //     }
 //     else{
-//       reject("Noodles not available");// pending -> rejected 
+//       reject("Noodles not available");// pending -> rejected
 //     }
 //   },3000);
 // });
@@ -654,11 +648,11 @@
 //       // setTimeout(()=>{
 //       //   console.log(promise);
 //       // },4000);
-// // if the promise is successfull then we run this 
+// // if the promise is successfull then we run this
 // // .then is a method on promise
 // promise.then((message)=>{
 //   console.log("setting table", message);
-// }).catch((message)=>{ // catch if the promise is not true unsuccessful 
+// }).catch((message)=>{ // catch if the promise is not true unsuccessful
 //   console.log("prepare maggi", message);
 // })
 
@@ -666,12 +660,12 @@
 //used for network and api calls
 // https://jsonplaceholder.typicode.com/todos/1
 // JSON -> javascript object notation
-  // fetch("https://jsonplaceholder.typicode.com/todos/1").then(response =>{
-  //   let full = response.json()
-  //   full.then((data)=>{
-  //     console.log(data);
-  //   });
-  // });
+// fetch("https://jsonplaceholder.typicode.com/todos/1").then(response =>{
+//   let full = response.json()
+//   full.then((data)=>{
+//     console.log(data);
+//   });
+// });
 
 //fetch("https://api.example.com/data").then(response =>)
 // fetch("https://jsonplaceholder.typicode.com/todos/5").then(response =>{
@@ -681,11 +675,11 @@
 // });
 
 //async and await
-  // async function stuff(){ // an async function always gives us a promise wrapping the returned thing
-  //   return 2;
-  // }
-  // let result = stuff();
-  // result; // in this case it is a fullfilled promise, bc when you return a value it's fulfilled resolved promise already
+// async function stuff(){ // an async function always gives us a promise wrapping the returned thing
+//   return 2;
+// }
+// let result = stuff();
+// result; // in this case it is a fullfilled promise, bc when you return a value it's fulfilled resolved promise already
 // async function arr(){
 //   return [1,2,3,4,5];
 // }
@@ -702,7 +696,7 @@
 //   console.log(data);
 // }).catch((error)=>{
 //   console.log("error");
-// }); 
+// });
 
 // async function getTodo(){
 //   // fetch("https://jsonplaceholder.typicode.com/todos/5").then((response)=>{
@@ -711,7 +705,7 @@
 //   //   console.log(data);
 //   // });
 //   // });
-  
+
 //   // now we can use await keyword
 //   let rresponse = await fetch("https://jsonplaceholder.typicode.com/todos/5");
 //   let data = await response.json();
@@ -727,23 +721,22 @@
 // }
 
 //error handling in fetch
-  // async function todo(){
-  //   try{
-  //     let response = await fetch("https://jsonplaceholder.typicode.com/todos/5");
-  //   // console.log(response);
-  //     if(!response.ok){
-  //       let message = "error";
-  //       throw new Error(message);
-  //     }
-  //   let data = await response.json();
-  //   console.log(data);
-  //   }
-  //   catch(error){
-  //     console.log(message);
-  //   }
-  // }
-  // todo();
-  
+// async function todo(){
+//   try{
+//     let response = await fetch("https://jsonplaceholder.typicode.com/todos/5");
+//   // console.log(response);
+//     if(!response.ok){
+//       let message = "error";
+//       throw new Error(message);
+//     }
+//   let data = await response.json();
+//   console.log(data);
+//   }
+//   catch(error){
+//     console.log(message);
+//   }
+// }
+// todo();
 
 // function checkCanIVote( delay , age) {
 //   let promise = new Promise((resolve, reject)=>{
@@ -787,3 +780,61 @@
 
 // npm install or i lodash
 // npm run dev
+
+// indexOf() whatever we give inside this it returns the index of it's first occurence
+//  step1:
+//     fetch()
+//     step2:
+//     fetch().then()
+//     step3:
+//     fetch().then(()=>{
+
+//     })
+//     step4:
+//     fetch().then((response)=>{
+//       return response.json();
+//     })
+//     step5:
+//     fetch().then((response)=>{
+//       return response.json();
+//     }).then((res)=>{
+//       console.log(res);
+//     })
+// arrow functions does not have a binding of this keyword
+// function is kinda method in general
+// a function that is a property of an object is a method
+// this refers to the owner object
+
+// var x = "a";
+// const obj = {
+//   x : "b",
+//   // f : () =>{
+//   //   console.log(this.x);
+//   // }
+//   // f : function(){
+//   //   console.log(this.x);
+//   // }
+// }
+// obj.f();
+
+// if we create smthn using let or const those identifier does not get connected to window object
+// api - application programming interface
+
+// folicals 
+// Array.prototype.myForEach = function(cb){
+//   for(var i = 0; i<this.length ; i++){
+//     cb(this[i], i, this)
+//   }
+// }
+// let arr = [1,2,3,4,5,6];
+// arr.myForEach((elem)=>{
+//   console.log(elem);
+// })
+ 
+// when alone this refers window
+// in object method this referes owner
+// in normal funtion this refers window 
+// in function in strict mode this refers to nothing
+// in event this referes to the element
+
+
