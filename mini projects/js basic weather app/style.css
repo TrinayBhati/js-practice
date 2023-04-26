@@ -1,0 +1,25 @@
+#city-input, #weather-output {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #F6F1E9;
+}
+h1{
+	font-size: 70px;
+}
+.btn{
+ 	background-color: #FF8400 !important;
+ }
+.banner {
+    color: #4F200D;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+body{
+	background-color: #FFD93D;
+}
+.card-body{
+	background-color: #FEFF86;
+}
+input{
+	background-color: #FEFF86 !important;
+}
