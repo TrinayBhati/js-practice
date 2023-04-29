@@ -1,255 +1,3 @@
-// Expressions
-
-// "string";
-// 1;
-// true;
-// false;
-// null;
-// undefined;
-// NaN;
-// [1,2,3];
-// ({id: 1});
-
-// function greet() {
-//   return "Hello"
-// }
-
-// greet()
-
-// 5 * 10
-// 10 + 8 / 1 * 10
-
-// 10 > 9
-// 10 === 11
-// 9 <= 1
-// "a" == "a"
-
-// const isHappy = null
-// isHappy ? "🍎" : "🔥"
-
-// && || !
-// true && "one"
-// false && true
-
-// "hey" || null
-
-// !"hey"
-
-// Convert a value to boolean
-// !!null
-// Boolean(null)
-
-// "HELLO".toLowerCase()
-// [1,2,3].includes(1)
-// [1,2,3,4].map(element => element * 2)
-// filter, some, find, findIndex
-
-//===================================================
-
-//const users = ["Alice", "Dan", "Jessica"];
-// const query = "A";
-
-// const user = users.filter((item) => item.startsWith(query));
-
-// console.log(user);
-
-// // Function has a closure over a variable
-// // or
-// // A function closes over a variable
-
-// /************************************************/
-
-// // Lexical Scope
-
-// function outermost() {
-//   const user = "Deadpool";
-//   function inner() {
-//     function innerMost() {
-//       const score = 100;
-//     }
-//   }
-// }
-
-// /************************************************/
-
-// // Garbage Collector
-// function liveAday() {
-//   const food = "cheese";
-//   const one = 1;
-//   const two = 2;
-//   function eat() {
-//     console.log("Eating...", food);
-//   }
-//   return eat;
-// }
-
-// const innerFunction = liveAday();
-
-// /************************************************/
-
-// // Memory Efficiency
-// // function heavyDuty(index) {
-// //   const bigArray = new Array(7000).fill("🔥");
-// //   console.log("Array Created");
-// //   return bigArray[index];
-// // }
-
-// // console.log(heavyDuty(700));
-// // console.log(heavyDuty(100));
-// // console.log(heavyDuty(100));
-// // console.log(heavyDuty(100));
-// // console.log(heavyDuty(100));
-// // console.log(heavyDuty(100));
-
-// function heavyDuty2() {
-//   const bigArray = new Array(7000).fill("🔥");
-//   console.log("Array Created");
-//   return function (index) {
-//     return bigArray[index];
-//   };
-// }
-
-// const getHeavyDuty = heavyDuty2();
-// getHeavyDuty(1);
-// getHeavyDuty(87);
-// getHeavyDuty(99);
-
-// /************************************************/
-
-// // Closures
-
-// // Encapsulation & Abstraction
-
-// const rahulSalary = (function () {
-//   let salary = 60000;
-
-//   function changeBy(amount) {
-//     salary += amount;
-//   }
-
-//   return {
-//     raise: function () {
-//       changeBy(5000);
-//     },
-//     lower: function () {
-//       changeBy(-10000);
-//     },
-//     currentAmount: function () {
-//       return salary;
-//     },
-//   };
-// })();
-
-// console.log(rahulSalary.currentAmount());
-// rahulSalary.raise();
-// console.log(rahulSalary.currentAmount());
-// rahulSalary.lower();
-// console.log(rahulSalary.currentAmount());
-
-// // Callbacks
-// function getVideoDetails(videos, callback) {
-//   // Network Call to the backend with videos
-//   setTimeout(() => {
-//     callback({ id: 1, title: "Hey Jack!", duration: 10 });
-//   }, 1500);
-// }
-
-// function getUserVideos(email, callback, errorCallback) {
-//   // Network Call to the backend with email
-//   setTimeout(() => {
-//     callback(["video1", "video2", "video3"]);
-//   }, 1500);
-// }
-
-// function loginUser(email, password, successCallback, errorCallback) {
-//   // Network Call to the backend with email and password
-//   setTimeout(() => {
-//     let error = true;
-//     if (error) {
-//       errorCallback("Network call Unsuccessful!");
-//     } else {
-//       success({ userEmail: email });
-//     }
-//   }, 1500);
-// }
-
-// loginUser(
-//   "david@gmail.com",
-//   12345,
-//   (userObject) => {
-//     getUserVideos(
-//       userObject.email,
-//       (videos) => {
-//         getVideoDetails(
-//           videos,
-//           () => {
-//             console.log(videos);
-//           },
-//           () => {
-//             console.log("Error");
-//           }
-//         );
-//       },
-//       (error) => {
-//         console.log("Error");
-//       }
-//     );
-//   },
-//   (error) => {
-//     console.log("Error");
-//   }
-// );
-
-// let user = {
-
-// firstName: 'naman',
-
-// lastName: 'jindal',
-
-// age: 10,
-
-// courseList: [],
-
-// /* key value itself */
-
-// /*
-
-// arrow functions do not have their own binding of this ->
-
-// if we are usign arrow functions in that case it matters where the function defination
-
-// exists, we will be going up the heirarchy to find the parent having its own this and
-
-// that will act as the value of this for that arrow function
-
-// whereas in the case of normal functions it matter how that function is getting called.
-
-// */
-
-// buyCourse: (courseName) =>{
-
-// console.log(this) //window
-
-// this.courseList.push(courseName);
-
-// },
-
-// getCourse: function(){
-
-// //console.log(this) ->
-
-// console.log(this.courseList)
-
-// }
-
-// }
-
-// user.buyCourse('react'); //
-
-// user.getCourse(); //
-
-//============= practice =====================
-
 // normal function
 // functions are first clas citizens
 // function speak (){
@@ -836,5 +584,54 @@
 // in normal funtion this refers window 
 // in function in strict mode this refers to nothing
 // in event this referes to the element
+
+/*conest getDog = async ()=>{
+	const url = "";
+	const response = await fetch(url);
+	const data = await response.json();
+}*/
+// rules for async await, gotta use in a f unction, must use keyword awai t n async
+
+//only have methods inside of classes 
+
+// Array.prototype.myPush = function(){
+// 	return this.length;
+// }
+// let froots = ["apple", "banana", "berries"];
+// console.log(froots.myPush());
+
+// class Bank{
+//   constructor(balance){
+//     this.balance = balance;
+//   }
+//   withdraw(amount){
+//     // if(amount >= this.balance){
+//        if(this.balance - amount <= 0){ 
+//        console.log("can't withdraw");
+//       return;
+//        }
+//     else{
+//       this.balance -= amount;
+//     }
+    
+//   }
+//   deposit(amount){
+//     this.balance += amount;
+//   }
+// }
+// const checking = new Bank(100);
+// // console.log(checking.balance);
+// // checking.deposit(20);
+// // console.log(checking.balance);
+// // checking.withdraw(10);
+// // console.log(checking.balance);
+// checking.withdraw(100);
+// // console.log(checking.balance);
+
+
+
+
+
+
 
 
