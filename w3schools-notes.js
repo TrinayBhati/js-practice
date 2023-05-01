@@ -20,7 +20,7 @@ sounds.forEach((voice)=>{
 })
 Array.isArray(sounds);// checks if array or not
 
-==============================Array Methods==============================
+==============================Array Method==============================
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.join(" * ");//returns string with seperation
 fruits.toString(); // returns array elements to string
@@ -46,7 +46,7 @@ newArr;
 let slicedArr = newArr.slice(5); // returns new array removing the elements upto the count given
 slicedArr;
 newArr;
-==============================Array Iterations==============================
+==============================Array loops==============================
 const numbers = [45, 4, 6, 16, 25];
 let sum = 0;
 //foreach takes in 3 arguments value, index, array
@@ -89,7 +89,7 @@ numbers.find((num) => {
 numbers.findIndex((num) => {
   return num > 18; // returns index of first number that satisfies the condition like filter
 });
-Array.from('asdfghjk'); // makturns any iterable object to array
+Array.from('asdfghjk'); // returns any iterable object to array
 numbers.includes(22); // checks n returns the value is present or not, returns boolean
 const q1 = ["Jan", "Feb", "Mar"];
 const q2 = ["Apr", "May", "Jun"];
@@ -138,17 +138,88 @@ const cars = [
 ];
 // while sorting array of objects we can take the sub element
 cars.sort((a, b) => a.year - b.year);
-
-
-
-
-
-
-
-
-
-
-
+==============================Object Basic==============================
+//name : value
+const person = { firstName: 'Trinay', age: 22 };
+person.lastName = 'Bhati';
+person.eyeColor = 'black';
+person;
+// const person2 = new Object();
+// person2.firstName = "Shourya";
+// person2.lastName = "Bhati";
+// person2; // no need to use this new
+//objects are mutable not passed by reference but by value
+person.age; // ways to access js properties
+person['age'];
+let x = 'firstName';
+person[x]; //via expression
+let txt = '';
+for (let x in person) {
+  // looping through objects
+  txt += person[x] + ' ';
+}
+person.age = 23;
+delete person.eyeColor; // delet person["eyeColor"] // let x = "eyeColor"; delete person[x];
+person;
+const myObj = {
+  car1: 'audi',
+  car2: 'bmw',
+  car3: 'bugatti',
+  yourObj: {
+    bike1: 'ninja',
+    bike2: 'bullet',
+  },
+};
+myObj.yourObj.bike2;
+myObj.yourObj['bike1'];
+const user = {
+  name: 'john',
+  lastName: 'doe',
+  age: 32,
+  cars: [
+    { name: 'Ford', model: ['Fiesta', 'Focus', 'Mustang'] },
+    { name: 'BMW', model: ['320', 'X3', 'X5'] },
+  ],
+};
+user.cars[0].name; // object -> array -> object
+user.cars[1].model[2]; // object -> array -> object -> array
+==============================Object methods==============================
+const person = {
+  firstName : "Trinay",
+  lastName : "Bhati",
+  age : 22,
+  info : function(){ // this refers to an object
+    return this.firstName + " " 
++ this.lastName + " is " + this.age + " years old";
+  }
+}
+person.info();
+// in object method this -> object
+// alone this -> global object
+// function this -> global object
+// event this -> element with event
+person.kaboom = function(){
+  return "LFG";
+}
+person.kaboom();
+==============================Object strings==============================
+const person = {
+  name :"John",
+  age : 30,
+  today : new Date(),
+}
+person;
+let txt = "";
+for(let x in person){
+   txt += person[x] + " ";
+}
+const myArray =Object.values(person);// any object can be converted to array using Object.value()
+myArray;
+const myString = JSON.stringify(person);// converts to string format, can convert dates to strings as well but not functions
+myString;
+const arr =  ["John", "Peter", "Sally", "Jane"];
+let str = JSON.stringify(arr);
+str;
 
 
 
