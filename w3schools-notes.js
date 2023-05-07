@@ -220,6 +220,49 @@ myString;
 const arr =  ["John", "Peter", "Sally", "Jane"];
 let str = JSON.stringify(arr);
 str;
+==============================Object constructors==============================
+//getters and setters
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  language: 'en',
+  get lang() {
+    return this.language;
+  },
+  get bang() {
+    return this.language.toUpperCase();
+  },
+  get tang() {
+    return this.firstName + ' ' + this.lastName;
+  },
+  set dang(dang) {
+    this.language = dang.toUpperCase();
+  },
+};
 
-
-
+// Display data from the object using a getter:
+person.lang; // using get we can access it as property instead of function
+person.bang;
+person.tang;
+person.dang = 'hindi'; // sets the language to ten
+person.language;
+person.speaks = function () {
+  return this.firstName + ' ' + this.language;
+};
+person.speaks();
+==============================Object Prorotypes==============================
+function person(first, last, age, eyeColor){
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyeColor;
+}
+const me = new person("Trinay" ,"Bhati", 22, "black");
+me;
+//prototypes - adding properties or methods to existing objects
+person.prototype.nationality = "Indian";
+me.nationality;
+person.prototype.name = function(){
+  return (this.firstName + " " + this.lastName);
+}
+me.name();
