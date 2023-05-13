@@ -70,3 +70,21 @@
 
 // console.log(1 < 2 < 3);
 // console.log(3 > 2 > 1);
+// console.log(3<2<1)
+
+// let x = false;
+// console.log(!!x)
+
+// const numbers= [1,2,3]
+// numbers.map(n => 2*n)
+// console.log(numbers)
+
+// const num = [1,2,3]
+// console.log(num.push(5))
+
+// const num = [1,2,3]
+// console.log(num.pop())
+
+// const obj1 = {name: 'Sachin'};
+// const obj2 = {name: 'Kohli'};
+// console.log({...obj1, ...obj2})
