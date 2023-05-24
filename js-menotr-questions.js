@@ -200,3 +200,16 @@
 // var x = 10;
 // let y = 20;
 
+// console.log(1 + -"1" + "2");
+
+// console.log(1 + +"2" + "2");
+
+// console.log("true" == true);
+
+// console.log(+"1" + "1" + "2");
+
+// console.log([] + []);
+
+// console.log("1" - -"1");
+
+// console.log("foo" + +"bar");
