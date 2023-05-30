@@ -632,10 +632,9 @@ const checking = new Bank(100);
 checking.withdraw(100);
 // console.log(checking.balance);
 
-
-
-
-
-
-
+const obj = undefined
+obj && obj.class;
+obj?.class;
+const object = {};
+object.location?.id;
 
