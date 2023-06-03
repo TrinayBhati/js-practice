@@ -90,7 +90,7 @@
 // console.log({...obj1, ...obj2})
 
 // function real(){
-//   return "pussy";
+//   return "stussy";
 // }
 // function real(){
 //   return "tussy";
@@ -213,3 +213,128 @@
 // console.log("1" - -"1");
 
 // console.log("foo" + +"bar");
+
+// function fruit (){
+//   console.log(name);
+//   console.log(price);
+//   var name = "apple";
+//   let price = 20;
+// }
+// fruit();
+
+// for(var i = 0; i<3 ; i++){
+//   setTimeout(()=>console.log(i), 1);
+// }
+
+// for(let i = 0; i<3 ; i++){
+//   setTimeout(()=>console.log(i), 1);
+// }
+
+// console.log(+true)
+// console.log(typeof +true)
+// console.log(+false)
+
+// console.log(!"trinay");
+// console.log(typeof (!"trinay"))
+
+// let data = "size";
+// const bird = {
+//   size : "small",
+// }
+// console.log(bird[data]);
+// console.log(bird["size"]);
+// console.log(bird.size);
+// console.log(bird.data);
+
+// let c = { name : "peter"};
+// let d ;
+// d = c;
+// d.name;
+// c.name = "bruce";
+// d.name;
+
+// var x;
+// var x = 10;
+// console.log(x);
+
+// let x;
+// let x = 10;
+// console.log(x);
+
+// let a = 3;
+// let b = new Number(3);
+// a==b
+// a===b
+// typeof(a)
+// typeof(b)
+
+// let name;
+// nmae = {};
+// console.log(name)
+
+// function fruit(){
+//   console.log("woof");
+// }
+// fruit.name = "apple";
+// fruit();
+
+// function sum(a,b){
+//   return a+b;
+// }
+// sum(1, "2")
+// sum("2", 1)
+// sum(2,2)
+
+// let number = 0;
+// console.log(number++);
+// console.log(++number);
+// console.log(number)
+
+// function getAge(...args){
+//   console.log(typeof args)
+// }
+// getAge(21)
+
+// function getAge(){
+//   'use strict';
+//   age = 21;
+//   console.log(age);
+// }
+// getAge();
+
+// const sum = eval("10*10+5");
+// sum;
+
+// const obj = {1 : "a" , 2 : "b" , 3 : "c" };
+// obj.hasOwnProperty("2")
+// obj.hasOwnProperty(3)
+
+// const obj = {a : "one", b : "two", a : "three"};
+// obj;
+
+// for(let i = 1; i<5 ; i++){
+//   if(i === 3) continue;
+//   console.log(i);
+// }
+
+// const foo = () => console.log("first");
+// const boo = () => setTimeout(()=>console.log("second"));
+// const zoo = () =>console.log("third");
+// foo() 
+// boo() // first third then second
+// zoo()
+
+// const person = {name : "messi"};
+// function hi (age){
+//   return `${this.name} and ${age}`;
+// }
+// hi.call(person,22)
+// hi.bind(person, 22)()
+
+// function boom(){
+//   return(()=>0)();
+// }
+// boom();
+
+// (()=>0)();
+

@@ -266,3 +266,5 @@ person.prototype.name = function(){
   return (this.firstName + " " + this.lastName);
 }
 me.name();
+==============================Storage==============================
+// sessionStorage would be cleared once the browser is closed, localStorage would remain there
