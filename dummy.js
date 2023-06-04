@@ -302,6 +302,17 @@ Person.prototype.work = function(){
   console.log(`${this.name} is working`);
 }
 
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+Person.prototype.greet = function() {
+  console.log("Hello, my name is " + this.name);
+};
+var person1 = new Person("Alice", 25);
+person1.greet(); // Output: Hello, my name is Alice
+
+
 // event loop
 // single threaded language -> js can do only one thing at a time.
 // synchronous
@@ -637,4 +648,77 @@ obj && obj.class;
 obj?.class;
 const object = {};
 object.location?.id;
+
+let count = 0;
+let id = setInterval(() => {
+  console.log(count);
+  count++;
+  if(count == 11){
+    clearInterval(id)
+  }
+}, 500);
+
+// new promise : basic 1
+const myPromise = new Promise((resolve, reject) => {
+  //Asynchronous task here
+  setTimeout(() => {
+    const random = Math.random();
+    if (random < 0.5) {
+      resolve(random);
+    } else {
+      reject(new Error('Number greater than expected'));
+    }
+  }, 2000);
+});
+myPromise
+  .then((result) => {
+    console.log('Resolved', result);
+  })
+  .catch((error) => {
+    console.log('Rejected', error.message);
+  });
+
+// example 2
+  function getData() {
+    return new Promise((resolve, reject) => {
+      fetch('https://api.example.com/data')
+        .then((response) => response.json())
+        .then((data) => resolve(data))
+        .catch((error) => reject(error));
+    });
+  }
+  getData()
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+
+//example 3
+    function delay(ms) {
+      return new Promise((resolve) => {
+        if (ms < 0) {
+          reject(new Error('Invalid delay time'));
+        } else {
+          setTimeout(resolve, ms);
+        }
+      });
+    }
+    let random = Math.floor(Math.random() * 10000);
+    delay(random)
+      .then(() => console.log('Delay completed'))
+      .catch((error) => console.log(error));
+
+//example 4
+      function readFileAsPromise(file) {
+        return new Promise((resolve, reject) => {
+          fs.readFile(file, 'utf8', (error, data) => {
+            if (error) {
+              reject(error);
+            } else {
+              resolve(data);
+            }
+          });
+        });
+      }
+      readFileAsPromise('notes.txt')
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
 

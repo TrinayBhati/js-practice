@@ -1,4 +1,5 @@
 ============================== Array ==============================
+//everything in js is primitive or object
 const sounds = [];
 sounds[0] = "kaboom";
 sounds[1] = "poof";

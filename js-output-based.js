@@ -338,3 +338,83 @@
 
 // (()=>0)();
 
+// function hi(){
+//   return ()=> 0;
+// }
+// hi()()
+// typeof(hi())
+// typeof(hi()())
+
+// typeof(typeof(1));
+
+// const numbers = [1, 2, 3];
+// numbers[9] = 11;
+// numbers;
+
+// const numbers = [1, 2, 3];
+// numbers[3] = numbers;
+// numbers;
+
+// null;
+// !null;
+// !!null;
+// !"";
+// !!"";
+// !1;
+// !!1;
+
+// let id = setInterval(()=>console.log("Hi"), 1000);
+// setTimeout(()=>clearInterval(id), 5000);
+
+// [..."Trinay"];
+// [...[3, 4, 6, 8]];
+
+// let data = 3 + 4 + 5 + "6";
+// data;
+// typeof(data);
+
+// typeof 3 + 4 +5 +"5";
+
+// typeof( +"5")
+
+// let data = [1, 2, 3, 4]
+// data.map((num)=>{
+//   if(typeof num === "number")
+//     return num *2;
+// })
+// data;
+
+// function getInfo(member){
+//   member.name = "lana"
+// };
+// const person = {name :"dwayne"};
+// getInfo(person);
+// person;
+
+// function car(){
+//   this.make = "Tata";
+//   return {make : "Kia"};
+// }
+// const myCar = new car();
+// myCar.make;
+
+// (()=>{
+//   let x = (y = 10);
+// })();
+// typeof x;
+// typeof y;
+// (()=>{
+//   let x = 10;
+// })();
+
+// let x = 100;
+// (()=>{
+//   var x = 10;
+// })();
+// x;
+
+// !true - true;
+
+// true + + "10";
+
+
