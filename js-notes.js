@@ -269,3 +269,28 @@ person.prototype.name = function(){
 me.name();
 ==============================Storage==============================
 // sessionStorage would be cleared once the browser is closed, localStorage would remain there
+==============================call, apply, bind==============================
+let name = {
+  firstName : "monkey . D . ", 
+  secondname :"Luffy",
+  fullName  : function(){
+    console.log(this.firstName + this.secondname);
+  }
+}
+name.fullName();
+//function borrowing - .call 
+let name2 = {
+  firstName : "Roronoa ", 
+  secondname :"Zoro",
+}
+name.fullName.call(name2); // in parenthesis is what we want the this to be pointed to
+function printName (homeTown, verse){
+  console.log(this.firstName + this.secondname + " from " + homeTown + " in " + verse)
+}
+printName.call(name2, "Konoha", "ninja verse"); // first argument is reference to this keyword later are the args to function
+// in applpy method we pass the args in arraylist
+printName.apply(name2, ["Konoha", "ninja verse"]); 
+// all bind does is binds the method with the object and keeps the copy in a variable so that it can be invoked later
+let print = printName.bind(name2, "Konoha", "ninja verse");
+print(); 
+print; // this is a function
