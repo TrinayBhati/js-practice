@@ -294,3 +294,4 @@ printName.apply(name2, ["Konoha", "ninja verse"]);
 let print = printName.bind(name2, "Konoha", "ninja verse");
 print(); 
 print; // this is a function
+==============================Destructuring==============================

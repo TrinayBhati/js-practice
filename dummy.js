@@ -675,8 +675,9 @@ myPromise
     console.log('Resolved', result);
   })
   .catch((error) => {
-    console.log('Rejected', error.message);
-  });
+    const newLocal = 'Rejected';
+    console.log(newLocal, error.message);
+  });2
 
 // example 2
   function getData() {
