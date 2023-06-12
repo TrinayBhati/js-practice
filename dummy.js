@@ -723,3 +723,10 @@ myPromise
         .then(data => console.log(data))
         .catch(error => console.log(error));
 
+// true && "one" => "one"
+// false && true => false
+// null && true => null
+// "hey" && false => false
+// true && true => true
+// true && false && true => false && true => false
+// "hey" && "what" && "are" && false => "what" && "are" && false => "are" && false => false
