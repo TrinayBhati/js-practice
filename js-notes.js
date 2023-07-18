@@ -47,6 +47,15 @@ newArr;
 let slicedArr = newArr.slice(5); // returns new array removing the elements upto the count given
 slicedArr;
 newArr;
+let arr = [1,2,3,4,5,6,7,8,];
+arr.slice(0,2); //[ 1, 2 ]
+arr.slice(0,7); //[ 1, 2, 3, 4, 5, 6, 7 ]
+arr.slice(3,5); //[ 4, 5 ]
+// mutate the og array -> splice / push
+  // append at the end of array -> push
+  // can append anywhere -> splice
+// do not mutate og array -> spread / concat
+
 ==============================Array loops==============================
 const numbers = [45, 4, 6, 16, 25];
 let sum = 0;
@@ -117,7 +126,6 @@ points[points.length - 1]; // how to get max number
 points[0]; // min number
 Math.max.apply(null, points); // first argument pass by apply to function is the value of this the next is the array here it's null so nothing
 Math.min.apply(null, points);
-//===============================================
 // finding max function
 const myMax = (arr) => {
   let i = 0;
@@ -131,7 +139,7 @@ const myMax = (arr) => {
   return max;
 };
 myMax(points);
-//===============================================
+//sort
 const cars = [
   { type: "Volvo", year: 2016 },
   { type: "BMW", year: 2000 },
@@ -139,6 +147,33 @@ const cars = [
 ];
 // while sorting array of objects we can take the sub element
 cars.sort((a, b) => a.year - b.year);
+==============================Object Creation==============================
+// object constructor 
+var obj = new Object(); 
+// object create 
+var obj = Object.create(null); 
+// Basic
+var obj = {
+  name : "Sudheer",
+  age : 34,
+};
+// function constructor
+function Person(name, age){
+  this.name = name;
+  this.age = age;
+}
+var obj = new Person("Shourya", 22);
+// function constructor using prototype
+function Person(){}; 
+Person.prototype.name = "DUMBO";
+var obj = new Person();
+// using es6 class
+class user { 
+  constructor(name){
+    this.name = name;
+  }
+}
+var object = new user("Heisenberg");
 ==============================Object Basic==============================
 //name : value
 const person = { firstName: 'Trinay', age: 22 };
@@ -294,4 +329,21 @@ printName.apply(name2, ["Konoha", "ninja verse"]);
 let print = printName.bind(name2, "Konoha", "ninja verse");
 print(); 
 print; // this is a function
+// call, apply, bind
+var employee1 = {firstName : "Shourya", lastName : " Bhati"}
+var employee2 = {firstName : "Trinay" , lastName : " Bhati"}
+function invite(greeting1 , greeting2){
+  console.log(greeting1 + "" + this.firstName + "" + this.lastName + "," + greeting2);
+};
+//call
+invite.call(employee1, "Hello " , " How are you?" );
+invite.call(employee2, "Hello " , " How are you?" );
+// apply
+invite.apply(employee1, ["Hello" , "How are you?"]);
+invite.apply(employee2, ["Hello" , "How are you?"]);
+//bind
+const inviteEmployee1 = invite.bind(employee1);
+const inviteEmployee2 = invite.bind(employee2);
+inviteEmployee1("Hello", "How are you?");
+inviteEmployee2("Hello", "How are you?");
 ==============================Destructuring==============================
