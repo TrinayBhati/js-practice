@@ -42,7 +42,8 @@ poof;
 const myArr = [[1,2], [3,4], [5,6]];
 const newArr = myArr.flat(); // makes the more than 1d array 1d
 newArr;
-newArr.splice(2, 0, 5, 8);// changes the original array
+newArr.splice(2, 0, 5, 8);// changes the original array 
+// splice returns deleted elements n changes the og array
 newArr;
 let slicedArr = newArr.slice(5); // returns new array removing the elements upto the count given
 slicedArr;
@@ -55,6 +56,7 @@ arr.slice(3,5); //[ 4, 5 ]
   // append at the end of array -> push
   // can append anywhere -> splice
 // do not mutate og array -> spread / concat
+
 
 ==============================Array loops==============================
 const numbers = [45, 4, 6, 16, 25];
