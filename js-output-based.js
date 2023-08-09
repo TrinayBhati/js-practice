@@ -7,14 +7,13 @@
 // Coercion and Type Conversion
 // array methods -> map, filter, reduce, splice, slice, find methods
 
-
-// function foo() {
-// let x = (y = 0);
-// x++;
-// y++;
-// return x;
-// }
-// console.log(foo(), typeof x, typeof y);
+function foo() {
+  let x = (y = 0);
+  x++;
+  y++;
+  return x;
+}
+console.log(foo(), typeof x, typeof y);
 
 // function main() {
 // console.log("A");
@@ -320,7 +319,7 @@
 // const foo = () => console.log("first");
 // const boo = () => setTimeout(()=>console.log("second"));
 // const zoo = () =>console.log("third");
-// foo() 
+// foo()
 // boo() // first third then second
 // zoo()
 
@@ -416,5 +415,3 @@
 // !true - true;
 
 // true + + "10";
-
-
