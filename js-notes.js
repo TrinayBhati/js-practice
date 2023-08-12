@@ -348,4 +348,4 @@ const inviteEmployee1 = invite.bind(employee1);
 const inviteEmployee2 = invite.bind(employee2);
 inviteEmployee1("Hello", "How are you?");
 inviteEmployee2("Hello", "How are you?");
-==============================Destructuring==============================
+
