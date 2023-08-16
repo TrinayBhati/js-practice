@@ -350,3 +350,16 @@ inviteEmployee1("Hello", "How are you?");
 inviteEmployee2("Hello", "How are you?");
 ==============================destructuring==============================
 
+
+==============================closures==============================
+function a(){
+  var x = 99;
+  function b(){
+    console.log(x); // 99
+  }
+  b();
+}
+a();
+
+
+
