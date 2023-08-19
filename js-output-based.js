@@ -7,13 +7,13 @@
 // Coercion and Type Conversion
 // array methods -> map, filter, reduce, splice, slice, find methods
 
-function foo() {
-  let x = (y = 0);
-  x++;
-  y++;
-  return x;
-}
-console.log(foo(), typeof x, typeof y);
+// function foo() {
+//   let x = (y = 0);
+//   x++;
+//   y++;
+//   return x;
+// }
+// console.log(foo(), typeof x, typeof y);
 
 // function main() {
 // console.log("A");
