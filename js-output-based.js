@@ -390,7 +390,7 @@
 // getInfo(person);
 // person;
 
-// function car(){
+//  function car(){
 //   this.make = "Tata";
 //   return {make : "Kia"};
 // }
@@ -415,3 +415,43 @@
 // !true - true;
 
 // true + + "10";
+
+// var a = 10;
+// (function(){
+//   console.log(a); // undefined due to hoisting
+//   var a = 20;
+// })();
+
+// console.log(1 + "2" + "2")//122
+// console.log(1 + + "2" + "2")//32
+// console.log(1 + - "1" + "2")//02
+// console.log( + "1" + "2" + "2")//122
+// console.log("A" - "B")//NaN
+// console.log("A" - "B"+2)//NaN
+
+// let num = 10;
+// const obj = {
+//   num : 20,
+//   inner : {
+//   num :30,
+//     print : function (){
+//       console.log(this.num); //30
+//     }
+// }
+// };
+// obj.inner.print();
+// const print = obj.inner.print;
+// print();//umndefimned
+
+// const person = {
+//   firstName : "John",
+//   lastName : "Doe",
+//   fullName : function(){
+//     return this.firstName + "" + this.lastName;
+//   }
+// };
+// const person2 = {
+//   firstName : "Jane",
+//   lastName : "Smith",
+// };
+// person.fullName(); //JohnDoe
