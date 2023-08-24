@@ -57,7 +57,6 @@ arr.slice(3,5); //[ 4, 5 ]
   // can append anywhere -> splice
 // do not mutate og array -> spread / concat
 
-
 ==============================Array loops==============================
 const numbers = [45, 4, 6, 16, 25];
 let sum = 0;
@@ -361,5 +360,14 @@ function a(){
 }
 a();
 
+==============================misceleneous==============================
 
+// hoisting
+// temporaoal deadzone
+// truthy/falsy
+// functions -> arrow, fxn definition, normal fxn, higher order fxn
+// event loop
+// undefined
+// Coercion and Type Conversion
+// array methods -> map, filter, reduce, splice, slice, find methods
 
