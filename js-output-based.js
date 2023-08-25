@@ -1,12 +1,3 @@
-// hoisting
-// temporaoal deadzone
-// truthy/falsy
-// functions -> arrow, fxn definition, normal fxn, higher order fxn
-// event loop
-// undefined
-// Coercion and Type Conversion
-// array methods -> map, filter, reduce, splice, slice, find methods
-
 // function foo() {
 //   let x = (y = 0);
 //   x++;
@@ -455,3 +446,82 @@
 //   lastName : "Smith",
 // };
 // person.fullName(); //JohnDoe
+
+// let y = "123";
+// +y; /// 123
+// Number(y); // 123
+// parseInt(y); // 123
+
+// let b = "ABC";
+// +b; /// NaN
+// Number(b); // NaN
+// parseInt(b); // NaN
+
+// let b = "100abd";
+// +b; /// NaN
+// Number(b); // NaN
+// parseInt(b); // 100 if we put a number in starting of string parseInt would give u that number
+
+// function test(){
+//   var a = "ABCD";
+//   if(true){
+//     var a = "XYZ";
+//     console.log(a);
+//   }
+//   console.log(a);
+// }
+// test(); // XYZ XYZ
+
+// function test(){
+//   var a = "ABCD";
+//   if(true){
+//     let a = "XYZ";
+//     console.log(a);
+//   }
+//   console.log(a);
+// }
+// test(); // XYZ ABCD
+
+// function test(){
+//   if(true){
+//     let a = "XYZ";
+//     console.log(a);
+//   }
+//   console.log(a);
+// }
+// test(); // XYZ reference erro not defined
+
+// function test(){
+//   var a = "ABCD";
+//   if(true){
+//     console.log(a);
+//   }
+//   console.log(a);
+// }
+// test(); // ABCD ABCD
+
+// // triple equals check type as well
+// 100.0 == "100" // true
+// 100.0 === "100" // false
+// 100.0 == parseInt("100.0ishsg") // true
+// 100.0 === parseInt("100.0ishsg") // true
+// 100.0 == Number("100.0ishsg") // false
+// null == null // true
+// null === null // true
+// null == undefined // true
+// null === undefined // true
+// 0 == false // true
+// 0 === false // false
+// 1 == true // true
+// 1 === true // false
+// Number(true) // 1
+// Number(false) // 0
+// 1 == Number(true) // true
+// 1 === Number(true) // true
+// 1 == Number(false) // false
+
+
+
+
+
+

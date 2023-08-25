@@ -1,3 +1,5 @@
+// primitive data types are immutable
+// primitive data types can only hold one value
 ============================== Array ==============================
 //everything in js is primitive or object
 const sounds = [];
@@ -347,9 +349,15 @@ const inviteEmployee1 = invite.bind(employee1);
 const inviteEmployee2 = invite.bind(employee2);
 inviteEmployee1("Hello", "How are you?");
 inviteEmployee2("Hello", "How are you?");
-==============================destructuring==============================
-
-
+==============================truthy falsy==============================
+//falsy values
+  // 0 either +0 or -0
+  // undefined
+  // false
+  // null 
+  // NaN
+  // ""
+// rest is truthy values
 ==============================closures==============================
 function a(){
   var x = 99;
@@ -359,6 +367,42 @@ function a(){
   b();
 }
 a();
+// We also use closures for data hiding
+function createCounter() {
+    let count = 0; // Private variable
+
+    function increment() {
+        count++;
+        console.log("Count:", count);
+    }
+
+    return increment; // Returning the inner function
+}
+
+const counter = createCounter();
+counter(); // Output: Count: 1
+counter(); // Output: Count: 2
+// tricky timeout
+function x(){
+  for(var i = 0; i<=5; i++){
+    setTimeout(function(){
+      console.log(i);
+    }, i*1000);
+  }
+  console.log("sup");
+}
+x(); // 6 6 6 6 6 
+// tricky timeout
+function x(){
+  for(let i = 0; i<=5; i++){
+    setTimeout(function(){
+      console.log(i);
+    }, i*1000);
+  }
+  console.log("sup");
+}
+x();
+// 0 1 2 3 4 5
 
 ==============================misceleneous==============================
 
