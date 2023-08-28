@@ -305,6 +305,16 @@ person.prototype.name = function(){
   return (this.firstName + " " + this.lastName);
 }
 me.name();
+==============================Strings==============================
+let str = "Rabert sit down";
+str.length // 6
+str.toLowerCase(); // rabert sit down
+str.toUpperCase(); // RABERT SIT DOWN
+str.indexOf("sit"); // 7 //the first occurance of the string in str
+str.substring(2, 6); // bert // extracts the strings in between the index given 
+str.split(" "); //['Rabert', 'sit', 'down'] // divides str into array of substrings based on what we specify to be divided on here basedon space seperation
+str.replace("sit", "stand"); // Rabert stand down // replaces word given with another one provided
+str.trim(); // Rabert sit down // trims the spaces at the begening and end of the string
 ==============================Storage==============================
 // sessionStorage would be cleared once the browser is closed, localStorage would remain there
 ==============================call, apply, bind==============================
