@@ -58,9 +58,37 @@ arr.slice(3,5); //[ 4, 5 ]
   // append at the end of array -> push
   // can append anywhere -> splice
 // do not mutate og array -> spread / concat
-
+const arr = [1,2,3,4];
+const brr = arr;
+brr === arr // true
+brr[1] = "Trinay"
+arr; // [1,"Trinay",3, 4 ]
+// if we update new brr it also mutates arr not advisable
+//spread operator just copies the value n pass it to a different memory 
+const arr = [1,2,3,4];
+const brr = [...arr]
+brr === arr; //false
+brr[1] = "Trinay";
+arr; // [1,2,3,4] can copy objects as well
+//rest just takes extra paramaters and stores themm in array
+function sum (a,b,...rest){
+  console.log(a+b);// 3
+  console.log(rest); // [3,4,5,6,7,8]
+}
+sum(1,2,3,4,5,6,7,8,);
+//looping on rest
+function sum (...rest){
+  let sum = 0;
+  for(let num of rest){
+    sum += num;
+  }
+  return sum;
+}
+sum(1,2,3,4,5,6,7,8,); // 36
 ==============================Array loops==============================
 const numbers = [45, 4, 6, 16, 25];
+// for in used to iterate over properties of object, n iterates over indexes in arrays
+// for of iterates over arrays normally
 let sum = 0;
 //foreach takes in 3 arguments value, index, array
 // numbers.forEach(func);
@@ -425,3 +453,6 @@ x();
 // Coercion and Type Conversion
 // array methods -> map, filter, reduce, splice, slice, find methods
 
+// js can be run inside a browser or inside node (that is a c++ program that has google's v8 js engine embeded in it).
+//browser and node provide a run time environment for js code
+// ecmascript is just a specification and javascript is programming language
