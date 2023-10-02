@@ -2,6 +2,7 @@
 // primitive data types can only hold one value
 ============================== Array ==============================
 //everything in js is primitive or object
+//typeof arrays is object
 const sounds = [];
 sounds[0] = "kaboom";
 sounds[1] = "poof";
@@ -25,14 +26,16 @@ Array.isArray(sounds);// checks if array or not
 
 ==============================Array Method==============================
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.join(" * ");//returns string with seperation
+fruits.join(" * ");// returns string with seperation
 fruits.toString(); // returns array elements to string
 fruits.pop(); // returns and pops the last element from array
 fruits;
 fruits.push("Mango");// returns new array length
+// array.push pushes element to last of array
 fruits;
 fruits.shift();//returns and pops the first element form array
 fruits.unshift("Lemon"); //returns new array length
+//array.unshift pushes element to the begening of array
 fruits;
 fruits[3]
 fruits.length;
@@ -45,12 +48,20 @@ const myArr = [[1,2], [3,4], [5,6]];
 const newArr = myArr.flat(); // makes the more than 1d array 1d
 newArr;
 newArr.splice(2, 0, 5, 8);// changes the original array 
+//first param -> index where we want new elem, second param -> how many to delete, third param -> elems to add
 // splice returns deleted elements n changes the og array
 newArr;
 let slicedArr = newArr.slice(5); // returns new array removing the elements upto the count given
 slicedArr;
 newArr;
 let arr = [1,2,3,4,5,6,7,8,];
+arr.indexOf("a"); // -1 // returns index of the element if not then -1
+arr.lastIndexOf("a"); // -1 // returns index of the element last seen in array if not then -1
+arr.includes(3); // true // returns true or false depending the array has the element
+/// all the searching methods have second optional argument, giving which we can start the search from that index
+// for arrays with reference types use find method
+// arr.find({any object or array}); // find method takes a function as parameter
+// findIndex returns the index works same as find
 arr.slice(0,2); //[ 1, 2 ]
 arr.slice(0,7); //[ 1, 2, 3, 4, 5, 6, 7 ]
 arr.slice(3,5); //[ 4, 5 ]
@@ -85,11 +96,27 @@ function sum (...rest){
   return sum;
 }
 sum(1,2,3,4,5,6,7,8,); // 36
+
 ==============================Array loops==============================
 const numbers = [45, 4, 6, 16, 25];
-// for in used to iterate over properties of object, n iterates over indexes in arrays
+// for in used to iterate over properties of object, n iterates over indexes in arrays 
+const person = {
+  name : "Trinay", age : "22",
+}
+for(let key in person){
+  console.log(key, person[key]); // name Trinay then age 22
+}
+// in case of arrays key is index of the array elements
+const arr = ["red", "blue", "green"];
+for(let index in arr){
+  console.log(index, arr[index]); // 0 red then 1 blue then 2 green
+}
 // for of iterates over arrays normally
+const arr = ["red", "blue", "green"];
+for(let color of arr){
+  console.log(color); // red then blue then green
 let sum = 0;
+}
 //foreach takes in 3 arguments value, index, array
 // numbers.forEach(func);
 // function func(value, index, array) {
@@ -207,7 +234,8 @@ class user {
 var object = new user("Heisenberg");
 ==============================Object Basic==============================
 //name : value
-const person = { firstName: 'Trinay', age: 22 };
+const person = { firstName: 'Trinay', age: 22 }; // we cannot reassign const but we can change methods n properties inside the obj
+//dot notation
 person.lastName = 'Bhati';
 person.eyeColor = 'black';
 person;
@@ -217,6 +245,7 @@ person;
 // person2; // no need to use this new
 //objects are mutable not passed by reference but by value
 person.age; // ways to access js properties
+//bracket notation
 person['age'];
 let x = 'firstName';
 person[x]; //via expression
@@ -226,7 +255,8 @@ for (let x in person) {
   txt += person[x] + ' ';
 }
 person.age = 23;
-delete person.eyeColor; // delet person["eyeColor"] // let x = "eyeColor"; delete person[x];
+delete person.age; // deletes age property from person obj
+delete person.eyeColor; // delete person["eyeColor"] // let x = "eyeColor"; delete person[x];
 person;
 const myObj = {
   car1: 'audi',
@@ -269,6 +299,8 @@ person.kaboom = function(){
   return "LFG";
 }
 person.kaboom();
+Object.keys() // returns a string array
+if("radius" in obj) cosole.log("yes"); // in operator checks if property exists inside the object and returns true false accordingly
 ==============================Object strings==============================
 const person = {
   name :"John",
@@ -333,7 +365,38 @@ person.prototype.name = function(){
   return (this.firstName + " " + this.lastName);
 }
 me.name();
+==============================Object Cloning==============================
+//basic approach
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('Draw');
+  },
+};
+
+const anotherCircle = {};
+
+for (let key in circle) {
+  anotherCircle[key] = circle[key];
+}
+anotherCircle; // { radius: 1, draw: ƒ draw() }
+
+// modern efficient approach
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('Draw');
+  },
+};
+
+const anotherCircle = Object.assign({}, circle); // the target object can be filled as well, and it'll fill it keeping previous properties as is.
+
+anotherCircle; // { radius: 1, draw: ƒ draw() }
+==============================Spread Rest==============================
+
 ==============================Strings==============================
+// strings are primitive types, but js internally wraps it to String object so we can access all these properties and methods. altough type of this string remains string.
+const objString = new String("Trinay"); // this is how we create String object but we don't have to. type of this remains object.
 let str = "Rabert sit down";
 str.length // 6
 str.toLowerCase(); // rabert sit down
@@ -341,8 +404,9 @@ str.toUpperCase(); // RABERT SIT DOWN
 str.indexOf("sit"); // 7 //the first occurance of the string in str
 str.substring(2, 6); // bert // extracts the strings in between the index given 
 str.split(" "); //['Rabert', 'sit', 'down'] // divides str into array of substrings based on what we specify to be divided on here basedon space seperation
-str.replace("sit", "stand"); // Rabert stand down // replaces word given with another one provided
+str.replace("sit", "stand"); // Rabert stand down // replaces word given with another one provided. returns a new string doesn't update og string
 str.trim(); // Rabert sit down // trims the spaces at the begening and end of the string
+str.startsWith() // checks if the string starts with given args, case senstive.
 ==============================Storage==============================
 // sessionStorage would be cleared once the browser is closed, localStorage would remain there
 ==============================call, apply, bind==============================
