@@ -4,7 +4,7 @@
 //   y++;
 //   return x;
 // }
-// console.log(foo(), typeof x, typeof y);
+// console.log(foo(), typeof x, typeof y); // 1 'undefined' 'number'
 
 // function main() {
 // console.log("A");
@@ -13,27 +13,27 @@
 // }, 0);
 // console.log("C");
 // }
-// main();
+// main(); // "A" "C" "B"
 
-// console.log(0.1 + 0.2 === 0.3);
+// console.log(0.1 + 0.2 === 0.3); // false
 
 // var y = 1;
 // if (function f() {}) {
 // y += typeof f;
 // }
-// console.log(y);
+// console.log(y); // 1undefined
 
 // var y = 1;
 // if ("") {
 // y += typeof f;
 // }
-// console.log(y);
+// console.log(y); // 1
 
 // var myChars = ["a", "b", "c", "d"];
-// delete myChars[0];
-// console.log(myChars);
-// console.log(myChars[0]);
-// console.log(myChars.length);
+// delete myChars[0]; // true
+// console.log(myChars); // [<1 empty item>, 'b', 'c', 'd'] 
+// console.log(myChars[0]); // undefined
+// console.log(myChars.length); // 4
 
 // var array1 = new Array(3);
 // console.log(array1);
@@ -520,8 +520,18 @@
 // 1 === Number(true) // true
 // 1 == Number(false) // false
 
+// function foo(){
+//   let x = y = 0;
+//   x++;
+//   y++;
+//   return x
+// }
+// console.log(foo(), typeof x, typeof y); // 1 'undefined' 'number'
 
-
-
+// var y = 1;
+// if(function f(){}){
+//   y += typeof f;
+// }
+// console.log(y); //1undefined
 
 
