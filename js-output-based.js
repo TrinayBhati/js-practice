@@ -534,4 +534,15 @@
 // }
 // console.log(y); //1undefined
 
+// const person = {
+//   firstname: 'Trinay',
+//   print: function () {
+//     console.log(this);
+//   },
+//   show: () => {
+//     console.log(this.FirstNname);
+//   },
+// };
+// person.print(); // person object
+// person.show(); // undefined
 

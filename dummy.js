@@ -730,3 +730,16 @@ myPromise
 // true && true => true
 // true && false && true => false && true => false
 // "hey" && "what" && "are" && false => "what" && "are" && false => "are" && false => false
+
+
+==========================================================================
+
+how to make site responsive media queries
+how to center element, position properties
+includes indexof let var const 
+how to change key names in object
+WHY WE USE JSON                              
+array methods                               
+object methods           
+large binary object 
+based on key how to define particular 

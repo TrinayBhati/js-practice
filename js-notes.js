@@ -60,7 +60,7 @@ arr.lastIndexOf("a"); // -1 // returns index of the element last seen in array i
 arr.includes(3); // true // returns true or false depending the array has the element
 /// all the searching methods have second optional argument, giving which we can start the search from that index
 // for arrays with reference types use find method
-// arr.find({any object or array}); // find method takes a function as parameter
+arr.find({any object or array}); // find method takes a function as parameter
 // findIndex returns the index works same as find
 arr.slice(0,2); //[ 1, 2 ]
 arr.slice(0,7); //[ 1, 2, 3, 4, 5, 6, 7 ]
