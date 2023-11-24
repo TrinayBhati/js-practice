@@ -115,7 +115,6 @@ for(let index in arr){
 const arr = ["red", "blue", "green"];
 for(let color of arr){
   console.log(color); // red then blue then green
-let sum = 0;
 }
 //foreach takes in 3 arguments value, index, array
 // numbers.forEach(func);
@@ -178,7 +177,7 @@ points.sort(function (a, b) {
   return b - a;
 }); // sorts numeric values
 points.sort((a, b) => a - b); // can be written as this also arrow function
-points.sort((a, b) => 0.5 - Math.random()); // sorts array in random order
+points.sort((a, b) => 0.5 - Math.random()); // sorts array in random order 
 points.sort((a, b) => a - b);
 points[points.length - 1]; // how to get max number
 points[0]; // min number
@@ -520,3 +519,6 @@ x();
 // js can be run inside a browser or inside node (that is a c++ program that has google's v8 js engine embeded in it).
 //browser and node provide a run time environment for js code
 // ecmascript is just a specification and javascript is programming language
+
+==============================questions==============================
+
