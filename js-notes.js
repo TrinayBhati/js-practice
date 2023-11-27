@@ -522,3 +522,6 @@ x();
 
 ==============================questions==============================
 
+// bearer token, authentication, authrization, api methods, access token, difference in SQL and nosql, 
+
+// 
